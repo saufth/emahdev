@@ -42,9 +42,9 @@ export const uniforms = {
   uDisplacementFrecuency: 0.69,
   uDisplacementStrength: 0.08,
   // Fresnel
-  uFresnelOffset: 0.25,
-  uFresnelMultiplier: 1.43,
-  uFresnelPower: 0.78,
+  uFresnelOffset: 0.85,
+  uFresnelMultiplier: 0,
+  uFresnelPower: 5,
   // Time
   uTime: 0.001
 }
