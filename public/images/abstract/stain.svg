@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg294"
+   width="48.819672"
+   height="54.7995"
+   viewBox="0 0 48.819672 54.7995"
+   sodipodi:docname="3157054.ai"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs298">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6640">
+      <path
+         d="M 0,0 H 750 V 500 H 0 Z"
+         id="path6638" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview296"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showgrid="false" />
+  <g
+     id="g302"
+     inkscape:groupmode="layer"
+     inkscape:label="Page 1"
+     transform="matrix(1.3333333,0,0,-1.3333333,-322.54993,97.716477)">
+    <g
+       id="g6634">
+      <g
+         id="g6636"
+         clip-path="url(#clipPath6640)">
+        <g
+           id="g6862"
+           transform="translate(244.7432,50.375)">
+          <path
+             d="m 0,0 0.354,-0.354 c 0.78,-0.78 2.056,-0.78 2.836,0 L 6.263,2.717 8.07,4.525 c 0.782,0.781 2.057,0.781 2.836,10e-4 L 11.262,4.172 C 12.041,3.392 12.04,2.116 11.261,1.336 L 9.452,-0.473 -2.247,-12.169 c -0.778,-0.779 -0.779,-2.057 10e-4,-2.836 l 0.353,-0.353 c 0.782,-0.78 2.057,-0.78 2.837,0 l 4.135,4.134 2.4,2.4 c 0.78,0.78 2.056,0.78 2.835,0 l 0.356,-0.355 c 0.779,-0.779 0.779,-2.054 -10e-4,-2.835 L 8.27,-14.413 c -0.78,-0.779 -0.78,-2.056 0,-2.836 l 0.353,-0.354 c 0.781,-0.779 2.057,-0.779 2.837,0 L 33.199,4.134 c 0.78,0.78 0.78,2.056 0,2.837 l -0.353,0.352 c -0.78,0.781 -2.056,0.781 -2.836,0 L 26.206,3.521 c -0.78,-0.78 -2.057,-0.781 -2.836,0 l -0.354,0.354 c -0.78,0.779 -0.78,2.056 0,2.835 l 4.395,4.394 5.318,5.317 c 0.78,0.78 0.78,2.057 0,2.836 l -0.355,0.355 c -0.78,0.779 -2.056,0.779 -2.836,0 l -3.072,-3.073 -2.504,-2.504 c -0.78,-0.78 -2.056,-0.78 -2.837,0 l -0.354,0.355 c -0.779,0.78 -0.779,2.055 0,2.835 l 1.915,1.913 c 0.779,0.78 0.779,2.055 0,2.836 l -0.355,0.353 c -0.78,0.781 -2.056,0.78 -2.837,0 L 0,2.835 C -0.78,2.056 -0.78,0.78 0,0"
+             style="fill:#008fea;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path6864" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+.navbar {
+  @apply
+    /* Sizing */
+    w-full
+    /* Layout */
+    fixed
+    top-0
+    z-40
+    /* Spacing */
+    px-12
+    py-3;
+}
+
+.nav {
+  @apply
+    /* Sizing */
+    w-full;
+}
+
+.logo {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    justify-start
+    items-center
+    gap-x-6
+    /* Layout */
+    -z-10;
+}
+
+.logomark {
+  @apply
+    /* Sizing */
+    w-9;
+}
+
+.logoname {
+  @apply
+    /* Layout */
+    -z-10;
+}
+
+.list {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    justify-between
+    items-center
+    /* Spacing */
+    pr-2 md:pr-0
+    gap-x-8 lg:gap-x-10;
+}

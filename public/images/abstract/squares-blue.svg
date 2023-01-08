@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg294"
+   width="24.881332"
+   height="37.320007"
+   viewBox="0 0 24.881332 37.320007"
+   sodipodi:docname="squares.svg"
+   inkscape:version="1.2.1 (1:1.2.1+202210291244+9c6d41e410)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs298">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6640">
+      <path
+         d="M 0,0 H 750 V 500 H 0 Z"
+         id="path6638" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview296"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="14.362269"
+     inkscape:cx="12.463211"
+     inkscape:cy="18.694817"
+     inkscape:window-width="1366"
+     inkscape:window-height="707"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g26979" />
+  <g
+     id="g302"
+     inkscape:groupmode="layer"
+     inkscape:label="Page 1"
+     transform="matrix(1.3333333,0,0,-1.3333333,-97.602661,83.106675)">
+    <g
+       id="g6634">
+      <g
+         id="g6636"
+         clip-path="url(#clipPath6640)">
+        <g
+           id="g26979"
+           inkscape:label="squeres">
+          <path
+             d="m 82.533,34.34 h -9.331 v 9.33 h 9.331 z"
+             style="fill:#1c09b3;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path6842"
+             inkscape:label="square3" />
+          <path
+             d="m 91.863,43.67 h -9.33 V 53 h 9.33 z"
+             style="fill:#1c09b3;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path6840"
+             inkscape:label="suqare2" />
+          <path
+             d="m 82.533,53 h -9.331 v 9.33 h 9.331 z"
+             style="fill:#3319ff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path6838"
+             inkscape:label="square1" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

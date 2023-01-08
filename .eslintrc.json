@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "./node_modules/standard/eslintrc.json"
+  ],
+  "rules": {
+    "import/no-restricted-paths": [
+      "error",
+      {
+        "zones": [
+          {
+            "target": "./src/core",
+            "from": "./src/components"
+          },
+          {
+            "target": "./src/core",
+            "from": "./src/modules"
+          },
+          {
+            "target": "./src/core",
+            "from": "./src/pages"
+          },
+          {
+            "target": "./src/modules",
+            "from": "./src/pages"
+          },
+          {
+            "target": "./src/components",
+            "from": "./src/pages"
+          },
+          {
+            "target": "./src/core",
+            "from": "./src/app"
+          },
+          {
+            "target": "./src/modules",
+            "from": "./src/app"
+          },
+          {
+            "target": "./src/components",
+            "from": "./src/app"
+          }
+        ]
+      }
+    ]
+  }
+}

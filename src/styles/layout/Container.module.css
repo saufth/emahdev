@@ -1,0 +1,102 @@
+.container {
+  @apply
+    /* Sizing */
+    max-w-[1260px]
+    /* Spacing */
+    my-0
+    mx-auto
+    px-6 sm:px-10 lg:px-10;
+}
+
+.size {
+  @apply
+    /* Sizing */
+    h-full;
+}
+
+.space {
+  @apply
+    /* Sizing */
+    py-8 md:py-12 lg:py-16;
+}
+
+.flexCenterStart {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    flex-col
+    justify-center
+    items-start;
+}
+
+.flexCenter {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    flex-col
+    justify-center
+    items-center;
+}
+
+.flexCenterEnd {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    flex-col
+    justify-center
+    items-end;
+}
+
+.flexRowStartCenter {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    justify-start
+    items-center;
+}
+
+.flexRowCenter {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    justify-center
+    items-center;
+}
+
+.flexRowCenterEnd {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    justify-end
+    items-center;
+}
+
+.flexRowCenterBetween {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    justify-between
+    items-center;
+}
+
+.flexRowCenterStart {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    justify-center
+    items-start;
+}
+
+.flexRowBetweenStart {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    justify-between
+    items-start;
+}
+
+.layout {
+  @apply
+    /* Layout */
+    relative;
+}
