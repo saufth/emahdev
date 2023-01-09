@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Navbar from '../components/navigation/Navbar'
 import Hero from '../components/sections/Hero'
 import Services from '../components/sections/Services'
-import WhatWeDo from '../components/sections/WhatWeDo'
+// import WhatWeDo from '../components/sections/WhatWeDo'
 
 /**
  * the base URL of the application
@@ -77,10 +77,10 @@ const HomePage = () => {
         <meta name='twitter:site' content='@rehsok' />
         <meta name='twitter:image' content={socialImageUrl} />
       </Head>
-      <main>
+      <main className='relative'>
         <Navbar />
         <Hero />
-        <WhatWeDo />
+        {/* <WhatWeDo /> */}
         <Services />
       </main>
       <GSearchSchemaScript />

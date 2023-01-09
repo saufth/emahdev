@@ -20,14 +20,14 @@
     /* Sizing */
     w-[146px]
     h-[30px]
-    bg-black
+    bg-white
     /* Layout */
     relative
     z-10
     /* Typography */
     font-supermolot-demibold
     text-sm
-    text-white
+    text-emah-dark
     /* Border */
     rounded-[3px]
     /* Animations & Transitions */

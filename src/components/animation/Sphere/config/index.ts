@@ -14,12 +14,12 @@ export const delta = 16
 export const lights = {
   a: {
     color: '#ff3600',
-    intensity: 3,
+    intensity: 1.72,
     spherical: new Spherical(1, 1.09, 0.1)
   },
   b: {
     color: '#ff6700',
-    intensity: 1.27,
+    intensity: 0.67,
     spherical: new Spherical(1, 1.17, -1.44)
   }
 }
@@ -40,11 +40,11 @@ export const uniforms = {
   uDistortionStrength: 1.98,
   // Displacement
   uDisplacementFrecuency: 0.69,
-  uDisplacementStrength: 0.1,
+  uDisplacementStrength: 0.08,
   // Fresnel
-  uFresnelOffset: 0.85,
-  uFresnelMultiplier: 0,
-  uFresnelPower: 5,
+  uFresnelOffset: 0.427,
+  uFresnelMultiplier: 0.412,
+  uFresnelPower: 1.087,
   // Time
   uTime: 0.001
 }
