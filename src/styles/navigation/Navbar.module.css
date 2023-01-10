@@ -17,6 +17,17 @@
     w-full;
 }
 
+.list {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    justify-between
+    items-center
+    /* Spacing */
+    pr-2 md:pr-0
+    gap-x-8 lg:gap-x-10;
+}
+
 .logo {
   @apply
     /* Flexbox & Grid */
@@ -31,22 +42,11 @@
 .logomark {
   @apply
     /* Sizing */
-    w-9;
+    w-11;
 }
 
 .logoname {
   @apply
     /* Layout */
     -z-10;
-}
-
-.list {
-  @apply
-    /* Flexbox & Grid */
-    flex
-    justify-between
-    items-center
-    /* Spacing */
-    pr-2 md:pr-0
-    gap-x-8 lg:gap-x-10;
 }

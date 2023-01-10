@@ -9,10 +9,8 @@
       /* Layout */
       overflow-x-hidden
       /* Typography */
-      font-supermolot-regular
+      font-proxima-soft-regular
       text-white
-      /* Background */
-      /* bg-emah-orange */
       /* Interactivity */
       scroll-smooth;
   }
@@ -39,24 +37,27 @@
       no-underline;
   }
 
+  h1, h2, h3 {
+    @apply
+      /* Typography */
+      font-proxima-soft-medium;
+  }
+
   h1 {
     @apply
       /* Typography */
-      font-supermolot-medium
       text-6xl;
   }
 
   h2 {
     @apply
       /* Typography */
-      font-supermolot-medium
       text-5xl;
   }
 
   h3 {
     @apply
       /* Typography */
-      font-supermolot-medium
       text-4xl;
   }
 
@@ -70,8 +71,43 @@
   /* Proxima Soft Fonts */
 
   @font-face {
+    font-family: Proxima Soft Thin;
+    src: url(../../public/fonts/proxima-soft/thin.ttf);
+  }
+
+  @font-face {
+    font-family: Proxima Soft Light;
+    src: url(../../public/fonts/proxima-soft/light.ttf);
+  }
+
+  @font-face {
+    font-family: Proxima Soft Regular;
+    src: url(../../public/fonts/proxima-soft/regular.ttf);
+  }
+
+  @font-face {
     font-family: Proxima Soft Medium;
     src: url(../../public/fonts/proxima-soft/medium.ttf);
+  }
+
+  @font-face {
+    font-family: Proxima Soft Semi Bold;
+    src: url(../../public/fonts/proxima-soft/semibold.ttf);
+  }
+
+  @font-face {
+    font-family: Proxima Soft Bold;
+    src: url(../../public/fonts/proxima-soft/bold.ttf);
+  }
+
+  @font-face {
+    font-family: Proxima Soft Extra Bold;
+    src: url(../../public/fonts/proxima-soft/extrabold.ttf);
+  }
+
+  @font-face {
+    font-family: Proxima Soft Black;
+    src: url(../../public/fonts/proxima-soft/black.ttf);
   }
 
   /* Cairo Fonts */

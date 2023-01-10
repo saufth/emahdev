@@ -32,7 +32,14 @@ module.exports = {
       /* Proxima Nova */
       'proxima-nova-medium': ['Proxima Nova Semibold', 'sans-serif'],
       /* Proxima Soft */
+      'proxima-soft-thin': ['Proxima Soft Thin', 'sans-serif'],
+      'proxima-soft-light': ['Proxima Soft Light', 'sans-serif'],
+      'proxima-soft-regular': ['Proxima Soft Medium', 'sans-serif'],
       'proxima-soft-medium': ['Proxima Soft Medium', 'sans-serif'],
+      'proxima-soft-semibold': ['Proxima Soft Semi Bold', 'sans-serif'],
+      'proxima-soft-bold': ['Proxima Soft Bold', 'sans-serif'],
+      'proxima-soft-extrabold': ['Proxima Soft Extra Bold', 'sans-serif'],
+      'proxima-soft-black': ['Proxima Soft Black', 'sans-serif'],
       /* Cairo */
       'cairo-extra-light': ['Cairo Extra Light', 'sans-serif'],
       'cairo-light': ['Cairo Light', 'sans-serif'],

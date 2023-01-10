@@ -3,7 +3,7 @@ import Container from '../layout/Container'
 // import Link from 'next/link'
 // Styles
 import styles from '../../styles/sections/WhatWeDo.module.css'
-import CallToAction from '../input/CallToAction'
+// import CallToAction from '../input/CallToAction'
 
 /**
  * This section specifies what organization does
@@ -23,7 +23,7 @@ export default function WhatWeDo () {
             un legado de progreso y verdad.
           </h2>
         </div>
-        <div className={styles.content}>
+        {/* <div className={styles.content}>
           <div className={styles.card}>
             <div className={styles.cardContainer}>
               <h2 className={styles.cardHeading}>
@@ -57,7 +57,7 @@ export default function WhatWeDo () {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </Container>
     </section>
   )

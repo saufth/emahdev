@@ -14,12 +14,12 @@ export const delta = 16
 export const lights = {
   a: {
     color: '#ff3600',
-    intensity: 1.72,
+    intensity: 1,
     spherical: new Spherical(1, 1.09, 0.1)
   },
   b: {
     color: '#ff6700',
-    intensity: 0.67,
+    intensity: 1,
     spherical: new Spherical(1, 1.17, -1.44)
   }
 }
@@ -27,12 +27,12 @@ export const lights = {
 // Uniforms
 export const uniforms = {
   // Color
-  uLightAColor: new Color(lights.a.color),
+  uLightAColor: new Color(lights.a.color).convertSRGBToLinear(),
   uLightAIntensity: lights.a.intensity,
-  uLightAPosition: new Vector3(0.0),
-  uLightBColor: new Color(lights.b.color),
+  uLightAPosition: new Vector3(0.0).setFromSpherical(lights.a.spherical),
+  uLightBColor: new Color(lights.b.color).convertSRGBToLinear(),
   uLightBIntensity: lights.b.intensity,
-  uLightBPosition: new Vector3(0.0),
+  uLightBPosition: new Vector3(0.0).setFromSpherical(lights.b.spherical),
   // Subdivision
   uSubdivision: new Vector2(size.width, size.height),
   // Distortion

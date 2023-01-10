@@ -90,7 +90,7 @@
     /* Typography */
     text-lg
     text-emah-gray
-    [&>span]:font-supermolot-demibold
+    [&>span]:font-proxima-soft-semibold
     [&>span]:text-emah-dark;
 }
 

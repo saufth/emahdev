@@ -3,8 +3,9 @@ import GSearchSchemaScript from '../components/app/scripts/GSearchSchemaScript'
 import Head from 'next/head'
 import Navbar from '../components/navigation/Navbar'
 import Hero from '../components/sections/Hero'
-import Services from '../components/sections/Services'
-// import WhatWeDo from '../components/sections/WhatWeDo'
+// import Services from '../components/sections/Services'
+import WhatWeDo from '../components/sections/WhatWeDo'
+import Background from '../components/abstract/Background'
 
 /**
  * the base URL of the application
@@ -80,9 +81,10 @@ const HomePage = () => {
       <main className='relative'>
         <Navbar />
         <Hero />
-        {/* <WhatWeDo /> */}
-        <Services />
+        <WhatWeDo />
+        {/* <Services /> */}
       </main>
+      <Background />
       <GSearchSchemaScript />
     </>
   )

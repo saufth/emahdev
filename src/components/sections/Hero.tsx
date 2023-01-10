@@ -44,7 +44,6 @@ export default function Hero () {
       <div className={styles.background}>
         <Sphere />
       </div>
-      <div className='w-full h-screen fixed top-0 left-0 -z-30 bg-gradient-to-r from-emah-orange via-emah-orange to-emah-orange-dark' />
     </section>
   )
 }

@@ -2,15 +2,17 @@
   @apply
     /* Sizing */
     w-[148px]
-    h-8
+    h-10
     /* Layout */
     relative
     [&>span]:absolute
     [&>span]:inset-0
     [&>span]:-z-10
+    bg-white
     /* Flexbox & Grid */
     grid
     place-items-center
+    rounded-3xl
     /* Boreder */
     [&>span]:rounded;
 }
@@ -20,14 +22,13 @@
     /* Sizing */
     w-[146px]
     h-[30px]
-    bg-white
     /* Layout */
     relative
     z-10
     /* Typography */
-    font-supermolot-demibold
+    font-proxima-soft-semibold
     text-sm
-    text-emah-dark
+    text-emah-gray
     /* Border */
     rounded-[3px]
     /* Animations & Transitions */

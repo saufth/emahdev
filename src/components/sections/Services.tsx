@@ -14,7 +14,7 @@ export default function Services () {
         <div className='space-y-16'>
           <div className='w-2xl space-y-8'>
             <h2>Nuestros servicios</h2>
-            <p className='font-supermolot-medium text-2xl'>
+            <p className='font-proxima-soft-medium text-2xl'>
               Somos más que una agencia creativa, también somos un centro de
               inteligencia. No solo somos expertos con los medios digital, también dominamos
               los medios offline. Creamos marcas nuevas e impulsamos a las existentes
