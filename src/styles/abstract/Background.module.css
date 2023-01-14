@@ -7,10 +7,24 @@
     fixed
     top-0
     left-0
-    -z-30
+    -z-50
     /* Background */
     bg-gradient-to-r
     from-emah-orange
     via-emah-orange
     to-emah-orange-dark;
+}
+
+.backgroundSphere {
+  @apply
+    /* Sizing */
+    w-full
+    h-3xl
+    /* Layout */
+    absolute
+    top-72
+    left-0
+    -z-40
+    /* Interactivity */
+    will-change-transform;
 }

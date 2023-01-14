@@ -1,13 +1,7 @@
-.section {
-  @apply
-    /* Background */
-    bg-center
-    bg-cover;
-  /* background-image: url(/images/sections/whatwedo/background.jpg); */
-}
-
 .header {
   @apply
+    /* Spacing */
+    py-8 md:py-12 lg:py-16
     /* Flexbox & Grid */
     flex
     flex-col
@@ -29,87 +23,8 @@
     /* Sizing */
     w-5xl
     /* Typography */
+    font-proxima-soft-medium
+    text-5xl
     text-white
     leading-snug;
-}
-
-.content {
-  @apply
-    /* Spacing */
-    py-64
-    /* Layout */
-    z-10
-    /* Flexbox & Grid */
-    flex
-    flex-col
-    items-center
-    gap-y-40;
-}
-
-.card {
-  @apply
-    /* Sizing */
-    w-5xl
-    /* Layout */
-    z-10 hover:z-20
-    overflow-hidden
-    /* Background */
-    bg-white/80
-    /* Border */
-    rounded-lg
-    /* Shadow */
-    shadow-center-2xl
-    shadow-emah-orange-dark/10
-    /* Filters */
-    backdrop-filter
-    backdrop-blur-sm
-    backdrop-saturate-[10]
-    /* Transitions & Animations */
-    ease-linear
-    duration-300
-    hover:scale-105;
-}
-
-.cardContainer {
-  @apply
-    /* Spacing */
-    p-16
-    space-y-8;
-}
-
-.cardHeading {
-  @apply
-    /* Typography */
-    leading-none;
-}
-
-.cardDescription {
-  @apply
-    /* Sizing */
-    w-lg
-    /* Typography */
-    text-lg
-    text-emah-gray
-    [&>span]:font-proxima-soft-semibold
-    [&>span]:text-emah-dark;
-}
-
-.cardFooter {
-  @apply
-    /* Flexbox & Grid */
-    flex;
-}
-
-.cardLink {
-  @apply
-    /* Spacing */
-    px-10
-    py-2.5
-    /* Typography */
-    font-supermolot-medium
-    text-emah-blue
-    /* Border */
-    border
-    border-emah-blue-light
-    rounded-sm;
 }

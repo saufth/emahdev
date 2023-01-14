@@ -1,12 +1,18 @@
-// Hooks
+// React
 import {
   useState,
   useEffect,
   MutableRefObject
 } from 'react'
+// Types
+import { MousePositionLayout } from '../../../types/input'
 
-type MousePositionLayout = 'screen' | 'offset'
-
+/**
+ * Used to get the mouse position
+ * @param ref A div ref to get the mouse position when its hovered
+ * @param from Used to define the method to get the mouse position
+ * @returns A object with the coordinates of the cursos
+ */
 const useRefMousePosition = (
   ref: MutableRefObject<HTMLDivElement>,
   from: MousePositionLayout = 'screen'

@@ -2,9 +2,7 @@
   @apply
     /* Sizing */
     w-full
-    h-3xl
-    /* Layout */
-    relative;
+    h-3xl;
 }
 
 .content {
@@ -29,14 +27,6 @@
     w-full
     /* Spacing */
     space-y-6;
-  }
-
-.slogan {
-  @apply
-  /* Typography */
-  font-cairo-medium
-  text-2xl
-  text-emah-gray/50;
 }
 
 .heading {
@@ -47,71 +37,4 @@
     font-proxima-soft-medium
     text-white
     tracking-widest;
-}
-
-.headingHighlight {
-  @apply
-  /* Typography */
-  text-transparent
-  /* Background */
-  bg-clip-text
-  bg-gradient-to-r
-  from-emah-orange-dark
-  via-emah-orange
-  to-emah-orange-light;
-}
-
-.description {
-  @apply
-    /* Typography */
-    font-supermolot-medium
-    text-xl
-    text-emah-gray
-    [&>span]:text-black;
-}
-
-.link {
-  @apply
-    /* Spacing */
-    px-10
-    py-2.5
-    /* Typography */
-    font-supermolot-medium
-    text-emah-blue-dark
-    /* Border */
-    border
-    border-emah-blue;
-}
-
-.imageContainer {
-  @apply
-    /* Sizing */
-    w-1/2
-    /* Flexbox & Grid */
-    flex
-    justify-end;
-}
-
-.image {
-  @apply
-    /* Sizing */
-    w-72 sm:w-lg
-    h-72 sm:h-lg
-    /* Layout */
-    -z-10
-    /* Border */
-    rounded-full
-    shadow-center-4xl
-    shadow-emah-orange-dark/40;
-}
-
-.background {
-  @apply
-    /* Layout */
-    absolute
-    inset-0
-    -z-20
-    /* Background */
-    bg-center
-    bg-cover;
 }

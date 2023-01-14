@@ -1,4 +1,3 @@
-'use client'
 // Styles
 import styles from '../../styles/input/CallToAction.module.css'
 
@@ -17,9 +16,6 @@ export default function CallToAction () {
       <button className={styles.button} onClick={handleAction}>
         Contáctanos
       </button>
-      {/* <span className={styles.backgroundOrange} />
-      <span className={styles.backgroundBlue} />
-      <span className={styles.backgroundPurple} /> */}
     </div>
   )
 }

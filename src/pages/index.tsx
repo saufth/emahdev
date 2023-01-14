@@ -1,30 +1,19 @@
 // Components
+import Background from '../components/abstract/Background'
 import GSearchSchemaScript from '../components/app/scripts/GSearchSchemaScript'
 import Head from 'next/head'
 import Navbar from '../components/navigation/Navbar'
 import Hero from '../components/sections/Hero'
-// import Services from '../components/sections/Services'
 import WhatWeDo from '../components/sections/WhatWeDo'
-import Background from '../components/abstract/Background'
+import SmoothScroll from '../components/interactivity/SmoothScroll'
 
-/**
- * the base URL of the application
- */
+/** The base URL of the application */
 const baseUrl = process.env.HOST
-
-/**
- * The name of the organization
- */
+/** The name of the organization */
 const organization = 'emah'
-
-/**
- * The desciption of the organization
- */
+/** The desciption of the organization */
 const description = 'Expert Marketing Associates & Hacks'
-
-/**
- * The keyword list as string
- */
+/** The keyword list as string */
 const keywords = String([
   'eamh',
   'marketing',
@@ -38,11 +27,10 @@ const keywords = String([
   'app development',
   'desarrollo de aplicaciones'
 ])
-
-/**
- * The social media image URL
- */
+/** The social media image URL */
 const socialImageUrl = `${baseUrl}images/emah.jpg`
+/** Twitter account */
+const twitter = '@emah'
 
 /**
  * The main page of the application
@@ -75,15 +63,16 @@ const HomePage = () => {
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:title' content={organization} />
         <meta name='twitter:description' content={description} />
-        <meta name='twitter:site' content='@rehsok' />
+        <meta name='twitter:site' content={twitter} />
         <meta name='twitter:image' content={socialImageUrl} />
       </Head>
-      <main className='relative'>
-        <Navbar />
-        <Hero />
-        <WhatWeDo />
-        {/* <Services /> */}
-      </main>
+      <Navbar />
+      <SmoothScroll>
+        <main>
+          <Hero />
+          <WhatWeDo />
+        </main>
+      </SmoothScroll>
       <Background />
       <GSearchSchemaScript />
     </>

@@ -1,4 +1,3 @@
-'use client'
 // Components
 import CallToAction from '../input/CallToAction'
 import Image from 'next/image'

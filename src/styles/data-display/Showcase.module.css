@@ -1,0 +1,62 @@
+.container {
+  @apply
+    /* Sizing */
+    w-full
+    h-3xl
+    [&>div]:w-1/2
+    [&>div]:h-full
+    /* Spacing */
+    [&>div]:p-5
+    /* Flexbox & Grid */
+    flex;
+}
+
+.demo {
+  @apply
+    /* Sizing */
+    w-7/12
+    h-full
+    /* Layout */
+    float-right
+    /* Flexbox & Grid */
+    flex
+    flex-col
+    justify-center
+    gap-y-8;
+}
+
+.header {
+  @apply
+    /* Spacing */
+    space-y-4;
+}
+
+.description {
+  @apply
+    /* Typography */
+    font-proxima-soft-semibold
+    text-[15px];
+}
+
+.imageContainer {
+  @apply
+    /* Sizing */
+    h-full
+    /* Flexbox & Grid */
+    flex
+    flex-col
+    justify-center;
+}
+
+.image {
+  @apply
+    /* Sizing */
+    w-md
+    h-[576px]
+    /* Border */
+    rounded-[11%]
+    /* Background */
+    bg-center
+    bg-cover
+    bg-hero;
+}

@@ -8,11 +8,12 @@
     @apply
       /* Layout */
       overflow-x-hidden
+      overscroll-y-none
       /* Typography */
       font-proxima-soft-regular
       text-white
-      /* Interactivity */
-      scroll-smooth;
+      antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   *, *::before, *::after {

@@ -22,7 +22,7 @@ const alignmentConfig: AligmentConfig = {
  * The main container component of the application
  * @see {@link ContainerProps} for props specifications
  * @param {ContainerProps} ContainerProps The component props
- * @returns Th Container component
+ * @returns The Container component
  */
 export default function Container (
   {

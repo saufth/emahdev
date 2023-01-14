@@ -117,10 +117,7 @@ const WaveShader = () => {
 
 const Sphere = () => {
   return (
-    <Canvas
-      className='relative mt-72'
-      dpr={Math.min(Math.max(window.devicePixelRatio, 1), 2)}
-    >
+    <Canvas dpr={Math.min(Math.max(window.devicePixelRatio, 1), 2)}>
       <WaveShader />
       <EffectComposer disableNormalPass>
         <Bloom
