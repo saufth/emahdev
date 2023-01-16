@@ -7,15 +7,15 @@ import useRefDimensions from '../../modules/sizing/hooks/useRefDimensions'
 // Animation
 import { useScroll, useTransform, useSpring, motion } from 'framer-motion'
 // Utils
-// import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
 // Types
 import { Physics } from '../../types/animation'
 import { Parent } from '../../types/layout'
 
 /** Sphere component */
-// const Sphere = dynamic(() => import('../animation/Sphere'), {
-//   ssr: false
-// })
+const Sphere = dynamic(() => import('../animation/Sphere'), {
+  ssr: false
+})
 
 /** SmoothScroll physics configuration */
 const physics: Physics = {
@@ -38,8 +38,8 @@ const SmoothScroll = ({ children }: Parent) => {
   const { scrollY } = useScroll()
   const transformContent = useTransform(scrollY, [0, height], [0, -height])
   const springContent = useSpring(transformContent, physics)
-  // const transformSphere = useTransform(scrollY, [0, (height * 1.88)], [0, -height])
-  // const springSphere = useSpring(transformSphere, physics)
+  const transformSphere = useTransform(scrollY, [0, (height * 1.88)], [0, -height])
+  const springSphere = useSpring(transformSphere, physics)
 
   return (
     <>
@@ -51,12 +51,12 @@ const SmoothScroll = ({ children }: Parent) => {
         {children}
       </motion.div>
 
-      {/* <motion.div
+      <motion.div
         style={{ y: springSphere }}
         className='w-full h-2xl lg:h-3xl fixed top-96 lg:top-72 left-0 -z-40 will-change-transform'
       >
         <Sphere />
-      </motion.div> */}
+      </motion.div>
 
       <Background />
 
