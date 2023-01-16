@@ -1,5 +1,5 @@
 // React
-import { useEffect, useRef, MutableRefObject } from 'react'
+import { useEffect, useRef, RefObject } from 'react'
 // Hooks
 import useRefDimensions from '../../sizing/hooks/useRefDimensions'
 import useRefMousePosition from '../../input/hooks/useRefMousePosition'
@@ -13,7 +13,7 @@ interface MagneticProps {
   /**
    * The magnetic field ref for a div
    */
-  fieldRef?: MutableRefObject<HTMLDivElement>
+  fieldRef?: RefObject<HTMLDivElement>
   /**
    * Rotation variant
    */
@@ -30,6 +30,16 @@ interface MagneticProps {
    * Layout to get mouse position
    */
   layout?: MousePositionLayout
+}
+
+interface Axis {
+  x: number
+  y: number
+}
+
+interface Transformable {
+  transition: Axis
+  rotation: Axis
 }
 
 /**
@@ -53,7 +63,7 @@ const useRefMagnetic = (
     layout = 'offset'
   }: MagneticProps
 ) => {
-  const magnetRef = useRef<HTMLDivElement>()
+  const magnetRef = useRef<HTMLDivElement>(null)
 
   const magneticField = fieldRef || magnetRef
 
@@ -66,12 +76,15 @@ const useRefMagnetic = (
 
     const orientation = attraction ? 1 : -1
 
-    const updateTransformStyle = ({ transition, rotation }) => {
-      magnetRef.current.style.transform = `
-      translate3d(${transition.x}px, ${transition.y}px, 0px)
-      rotateX(${rotation.x}deg)
-      rotateY(${rotation.y}deg)
-    `
+    const updateTransformStyle = ({ transition, rotation }: Transformable) => {
+      const node = magnetRef.current
+      if (node) {
+        node.style.transform = `
+        translate3d(${transition.x}px, ${transition.y}px, 0px)
+        rotateX(${rotation.x}deg)
+        rotateY(${rotation.y}deg)
+      `
+      }
     }
 
     const variationX = (mousePosition.x - halfWidth) / halfWidth
