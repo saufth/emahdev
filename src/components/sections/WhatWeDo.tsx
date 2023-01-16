@@ -9,7 +9,7 @@ import Link from '../navigation/Link'
  */
 const WhatWeDo = () => {
   return (
-    <section id='whatwedo'>
+    <section id='whatwedo' className={styles.section}>
       <div className={styles.header}>
         <h2 className={styles.heading}>
           Lo Que Hacemos
@@ -21,7 +21,7 @@ const WhatWeDo = () => {
           Ver más
         </Link>
       </div>
-      <div className='mt-64 space-y-48'>
+      <div className={styles.showcase}>
         <Showcase
           heading='Design'
           description='No es tan simple con solo tener un logo. Para ser distinguido, es necesario establecer algunos parámetros que se usen siempre, un concepto de diseño. Definimos elementos visuales, colores y tipografía. Creamos presentaciones visuales únicas y consistentes para marcas sobresalientes.'
@@ -40,10 +40,10 @@ const WhatWeDo = () => {
       </div>
       <div id='about' className='h-xl grid place-content-center'>
         <div className='text-center space-y-3'>
-          <h2 className='text-xl'>
+          <h2 className='text-lg md:text-xl'>
             Filosofía
           </h2>
-          <p className='font-proxima-soft-medium text-6xl'>
+          <p className='font-proxima-soft-medium text-5xl md:text-6xl'>
             Menos es más
           </p>
         </div>

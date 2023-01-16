@@ -1,3 +1,9 @@
+.section {
+  @apply
+    /* Spacing */
+    mt-48;
+}
+
 .header {
   @apply
     /* Spacing */
@@ -6,7 +12,7 @@
     flex
     flex-col
     items-center
-    gap-y-16
+    gap-y-12 md:gap-y-16
     /* Typography */
     text-center;
 }
@@ -14,17 +20,26 @@
 .heading {
   @apply
     /* Typography */
-    text-2xl
+    text-lg sm:text-xl md:text-2xl
     text-white/80;
 }
 
 .description {
   @apply
     /* Sizing */
-    w-5xl
+    max-w-5xl
+    /* Spacing */
+    px-6
     /* Typography */
     font-proxima-soft-medium
-    text-5xl
+    text-3xl sm:text-4xl md:text-5xl
     text-white
     leading-snug;
+}
+
+.showcase {
+  @apply
+    /* Spacing */
+    mt-64
+    space-y-28 md:space-y-48;
 }

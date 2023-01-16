@@ -53,7 +53,8 @@
   h2 {
     @apply
       /* Typography */
-      text-5xl;
+      text-4xl md:text-[40px] lg:text-5xl
+      leading-none;
   }
 
   h3 {
