@@ -19,12 +19,12 @@
     "@react-three/drei": "9.47.1",
     "@react-three/fiber": "8.9.1",
     "@react-three/postprocessing": "2.7.0",
+    "emah": "link:",
     "framer-motion": "8.4.0",
     "leva": "0.9.34",
     "next": "13.0.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "resize-observer-polyfill": "^1.5.1",
     "three": "0.147.0"
   },
   "devDependencies": {

@@ -21,8 +21,8 @@ const WaveShaderMaterial = shaderMaterial(
 extend({ WaveShaderMaterial })
 
 const WaveShader = () => {
-  const shaderRef = useRef<ShaderMaterial>()
-  const sphereRef = useRef<Mesh>()
+  const shaderRef = useRef<ShaderMaterial>(null)
+  const sphereRef = useRef<Mesh>(null)
 
   // const {
   //   colorALight,

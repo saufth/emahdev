@@ -10,6 +10,7 @@ specifiers:
   '@types/react-dom': 18.0.9
   '@types/three': 0.146.0
   autoprefixer: 10.4.13
+  emah: 'link:'
   eslint: 8.30.0
   eslint-config-next: 13.0.7
   framer-motion: 8.4.0
@@ -18,7 +19,6 @@ specifiers:
   postcss: 8.4.20
   react: 18.2.0
   react-dom: 18.2.0
-  resize-observer-polyfill: ^1.5.1
   standard: 17.0.0
   tailwindcss: 3.2.4
   three: 0.147.0
@@ -28,12 +28,12 @@ dependencies:
   '@react-three/drei': 9.47.1_xa6xk36nauwxkzngvitxgjpnr4
   '@react-three/fiber': 8.9.1_pvdsq7s4d5knbxbfttptgjiz3a
   '@react-three/postprocessing': 2.7.0_7l5c7g5ph6e5ybhvldx3hsiylq
+  emah: 'link:'
   framer-motion: 8.4.0_biqbaboplfbrettd7655fr4n2y
   leva: 0.9.34_biqbaboplfbrettd7655fr4n2y
   next: 13.0.7_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  resize-observer-polyfill: 1.5.1
   three: 0.147.0
 
 devDependencies:
@@ -3030,10 +3030,6 @@ packages:
   /require-from-string/2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
-    dev: false
-
-  /resize-observer-polyfill/1.5.1:
-    resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}
     dev: false
 
   /resolve-from/4.0.0:
