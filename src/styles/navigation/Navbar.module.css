@@ -7,7 +7,7 @@
     top-0
     z-40
     /* Spacing */
-    px-12
+    px-[5%]
     py-3;
 }
 
@@ -42,5 +42,5 @@
 .logomark {
   @apply
     /* Sizing */
-    w-11;
+    w-9 md:w-11;
 }

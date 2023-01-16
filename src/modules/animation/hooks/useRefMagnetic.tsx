@@ -1,46 +1,10 @@
 // React
-import { useEffect, useRef, RefObject } from 'react'
+import { useEffect, useRef } from 'react'
 // Hooks
 import useRefDimensions from '../../sizing/hooks/useRefDimensions'
 import useRefMousePosition from '../../input/hooks/useRefMousePosition'
 // Types
-import { MousePositionLayout } from '../../../types/input'
-
-/**
- * Used to configure the magnetic field
- */
-interface MagneticProps {
-  /**
-   * The magnetic field ref for a div
-   */
-  fieldRef?: RefObject<HTMLDivElement>
-  /**
-   * Rotation variant
-   */
-  rotation?: number
-  /**
-   * Transition variant
-   */
-  transition?: number
-  /**
-   * Define the orientation of transition and rotation
-   */
-  attraction?: boolean
-  /**
-   * Layout to get mouse position
-   */
-  layout?: MousePositionLayout
-}
-
-interface Axis {
-  x: number
-  y: number
-}
-
-interface Transformable {
-  transition: Axis
-  rotation: Axis
-}
+import { MagneticProps, Transformable } from '../../../types/animation'
 
 /**
  * Used to increase the magnetic force.
@@ -90,7 +54,7 @@ const useRefMagnetic = (
     const variationX = (mousePosition.x - halfWidth) / halfWidth
     const variationY = (mousePosition.y - halfHeight) / halfHeight
 
-    const transform = {
+    const transform: Transformable = {
       transition: {
         x: (variationX * (transition * strength)) * orientation,
         y: (variationY * transition) * orientation
