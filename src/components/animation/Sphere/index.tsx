@@ -50,7 +50,10 @@ const WaveShader = () => {
   // })
 
   useEffect(() => {
-    sphereRef.current.geometry.computeTangents()
+    const node = sphereRef.current
+    if (node) {
+      node.geometry.computeTangents()
+    }
   }, [])
 
   // Light A
@@ -88,8 +91,11 @@ const WaveShader = () => {
   // Time
 
   useFrame(() => {
-    // shaderRef.current.uniforms.uTime.value += config.delta * frecuencyTime
-    shaderRef.current.uniforms.uTime.value += config.delta * config.uniforms.uTime
+    const node = shaderRef.current
+    if (node) {
+      // shaderRef.current.uniforms.uTime.value += config.delta * frecuencyTime
+      shaderRef.current.uniforms.uTime.value += config.delta * config.uniforms.uTime
+    }
   })
 
   return (
