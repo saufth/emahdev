@@ -115,6 +115,10 @@ const WaveShader = () => {
   )
 }
 
+/**
+ * A configurable morphing sphere
+ * @returns A morphing sphere component
+ */
 const Sphere = () => {
   return (
     <Canvas dpr={Math.min(Math.max(window.devicePixelRatio, 1), 2)}>

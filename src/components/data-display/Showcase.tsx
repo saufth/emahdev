@@ -1,23 +1,15 @@
+// Components
+import CallToAction from '../input/CallToAction'
 // Styles
 import styles from '../../styles/data-display/Showcase.module.css'
-import CallToAction from '../input/CallToAction'
+// Types
+import { ShowcaseProps } from '../../types/data-display'
 
-/**
- * Showcase component props
- */
-interface ShowcaseProps {
-  /**
-   * Heading of the showcase
-   */
-  heading: string
-  /**
-   * Description of the showcase
-   */
-  description: string
-  /**
-   * Image to use on the showcase
-   */
-  image: string
+/** Configuration for available images */
+const imagesConfig = {
+  branding: styles.backgroundBranding,
+  design: styles.backgroundDesign,
+  development: styles.backgroundDevelopment
 }
 
 /**
@@ -27,6 +19,8 @@ interface ShowcaseProps {
  * @returns The Showcase component
  */
 const Showcase = ({ heading, description, image }: ShowcaseProps) => {
+  const imageStyle = `${styles.image} ${imagesConfig[image]}`
+
   return (
     <section className={styles.container}>
 
@@ -46,7 +40,7 @@ const Showcase = ({ heading, description, image }: ShowcaseProps) => {
 
       <div>
         <div className={styles.imageContainer}>
-          <div className={styles.image} />
+          <div className={imageStyle} />
         </div>
       </div>
 

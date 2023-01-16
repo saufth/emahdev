@@ -1,16 +1,14 @@
 // Styles
 import styles from '../../styles/input/CallToAction.module.css'
 
-/**
- * The primary action of the application
- */
+/** The primary action of the application */
 const handleAction = () => alert('Primary action dene!')
 
 /**
- * The primary and secondary call to actions of the application
+ * The primary call to actions of the application
  * @returns CallToAction component
  */
-export default function CallToAction () {
+const CallToAction = () => {
   return (
     <div className={styles.buttonContainer}>
       <button className={styles.button} onClick={handleAction}>
@@ -19,3 +17,5 @@ export default function CallToAction () {
     </div>
   )
 }
+
+export default CallToAction

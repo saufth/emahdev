@@ -47,7 +47,7 @@
   h1 {
     @apply
       /* Typography */
-      text-6xl;
+      text-5xl md:text-6xl;
   }
 
   h2 {

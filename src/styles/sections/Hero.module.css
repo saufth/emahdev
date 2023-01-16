@@ -2,39 +2,26 @@
   @apply
     /* Sizing */
     w-full
-    h-3xl;
-}
-
-.content {
-  @apply
-    /* Sizing */
-    h-screen
-    /* Spacing */
-    space-y-12
-    /* Layout */
-    flex flex-col
-    justify-center
-    items-center
-    /* Typography */
-    text-center
-    /* Layout */
-    relative;
+    h-xl
+    top-0;
 }
 
 .header {
   @apply
     /* Sizing */
     w-full
-    /* Spacing */
-    space-y-6;
+    h-full
+    /* Layout */
+    grid
+    place-content-center
+    gap-y-6;
 }
 
 .heading {
   @apply
-    /* Spacing */
-    mb-14
     /* Typography */
     font-proxima-soft-medium
     text-white
-    tracking-widest;
+    text-center
+    tracking-wide md:tracking-widest;
 }

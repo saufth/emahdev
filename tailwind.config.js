@@ -96,7 +96,10 @@ module.exports = {
         'center-4xl': '0px 0px 96px rgba(0, 0, 0, 1)'
       },
       backgroundImage: {
-        hero: "url('/images/sections/hero/hero.png')"
+        hero: "url('/images/sections/hero/hero.png')",
+        branding: "url('/images/sections/whatwedo/branding.jpg')",
+        design: "url('/images/sections/whatwedo/design.jpg')",
+        development: "url('/images/sections/whatwedo/development.jpg')"
       },
       transitionDelay: {
         600: '600ms'

@@ -9,7 +9,7 @@ import styles from '../../styles/navigation/Navbar.module.css'
  * The main navbar of application
  * @returns Navbar component
  */
-export default function Navbar () {
+const Navbar = () => {
   return (
     <header className={styles.navbar}>
 
@@ -39,3 +39,5 @@ export default function Navbar () {
     </header>
   )
 }
+
+export default Navbar

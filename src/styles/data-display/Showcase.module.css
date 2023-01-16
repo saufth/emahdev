@@ -60,3 +60,21 @@
     bg-cover
     bg-hero;
 }
+
+.backgroundBranding {
+  @apply
+    /* Background */
+    bg-branding;
+}
+
+.backgroundDesign {
+  @apply
+    /* Background */
+    bg-design;
+}
+
+.backgroundDevelopment {
+  @apply
+    /* Background */
+    bg-development;
+}

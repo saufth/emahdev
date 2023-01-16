@@ -1,11 +1,11 @@
 // Components
-import Background from '../components/abstract/Background'
+// import About from '../components/sections/About'
 import GSearchSchemaScript from '../components/app/scripts/GSearchSchemaScript'
 import Head from 'next/head'
 import Navbar from '../components/navigation/Navbar'
 import Hero from '../components/sections/Hero'
+import SmoothScroll from '../components/layout/SmoothScroll'
 import WhatWeDo from '../components/sections/WhatWeDo'
-import SmoothScroll from '../components/interactivity/SmoothScroll'
 
 /** The base URL of the application */
 const baseUrl = process.env.HOST
@@ -71,9 +71,9 @@ const HomePage = () => {
         <main>
           <Hero />
           <WhatWeDo />
+          {/* <About /> */}
         </main>
       </SmoothScroll>
-      <Background />
       <GSearchSchemaScript />
     </>
   )

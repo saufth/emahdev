@@ -6,8 +6,6 @@
     /* Layout */
     relative
     overflow-hidden
-    /* Background */
-    bg-white
     /* Border */
     rounded-3xl;
 }
@@ -20,5 +18,7 @@
     /* Typography */
     font-proxima-soft-semibold
     text-sm
-    text-emah-gray;
+    text-emah-gray
+    /* Background */
+    bg-white;
 }

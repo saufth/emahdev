@@ -1,9 +1,5 @@
 // React
-import {
-  useState,
-  useEffect,
-  MutableRefObject
-} from 'react'
+import { useState, useEffect, RefObject } from 'react'
 // Types
 import { MousePositionLayout } from '../../../types/input'
 
@@ -14,7 +10,7 @@ import { MousePositionLayout } from '../../../types/input'
  * @returns A object with the coordinates of the cursos
  */
 const useRefMousePosition = (
-  ref: MutableRefObject<HTMLDivElement>,
+  ref: RefObject<HTMLDivElement>,
   from: MousePositionLayout = 'screen'
 ) => {
   const [mousePosition, setMousePosition] = useState({
@@ -24,15 +20,13 @@ const useRefMousePosition = (
 
   useEffect(() => {
     const node = ref.current
-
-    const handleMousePosition = (event: MouseEvent) => {
-      setMousePosition({
-        x: event[`${from}X`],
-        y: event[`${from}Y`]
-      })
-    }
-
     if (node) {
+      const handleMousePosition = (event: MouseEvent) => {
+        setMousePosition({
+          x: event[`${from}X`],
+          y: event[`${from}Y`]
+        })
+      }
       node.addEventListener('mousemove', handleMousePosition)
 
       return () => {

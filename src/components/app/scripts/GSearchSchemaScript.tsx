@@ -62,7 +62,7 @@ const addWebsiteJsonId = () => {
  * Script for structured data for google seacrh
  * @returns Script component for structured data for google seacrh
  */
-export default function GSearchSquemaScript () {
+const GSearchSquemaScript = () => {
   return (
     <Script
       type='application/ld+json'
@@ -71,3 +71,5 @@ export default function GSearchSquemaScript () {
     />
   )
 }
+
+export default GSearchSquemaScript

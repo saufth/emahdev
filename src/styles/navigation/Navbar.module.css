@@ -44,9 +44,3 @@
     /* Sizing */
     w-11;
 }
-
-.logoname {
-  @apply
-    /* Layout */
-    -z-10;
-}

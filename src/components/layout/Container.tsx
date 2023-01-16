@@ -24,7 +24,7 @@ const alignmentConfig: AligmentConfig = {
  * @param {ContainerProps} ContainerProps The component props
  * @returns The Container component
  */
-export default function Container (
+const Container = (
   {
     children,
     auto,
@@ -33,7 +33,7 @@ export default function Container (
     relative,
     alignment
   }: ContainerProps
-) {
+) => {
   /**
    * Used to define the width of the container in auto and position it on center
    */
@@ -72,3 +72,5 @@ export default function Container (
     </div>
   )
 }
+
+export default Container

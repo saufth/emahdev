@@ -15,7 +15,7 @@
   @apply
     /* Typography */
     text-2xl
-    text-white/50;
+    text-white/80;
 }
 
 .description {
