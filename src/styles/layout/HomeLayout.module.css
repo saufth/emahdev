@@ -1,0 +1,43 @@
+.scrollable {
+  @apply
+    /* Sizing */
+    w-full
+    /* Layout */
+    fixed
+    top-0
+    left-0
+    overflow-hidden
+    /* Interactivity */
+    will-change-transform;
+}
+
+.sphere {
+  @apply
+    /* Sizing */
+    w-full
+    h-2xl lg:h-3xl
+    /* Layout */
+    fixed
+    top-96 lg:top-72
+    left-0
+    -z-40
+    /* Interactivity */
+    will-change-transform;
+}
+
+.background {
+  @apply
+    /* Sizing */
+    w-full
+    h-screen
+    /* Layout */
+    fixed
+    top-0
+    left-0
+    -z-50
+    /* Background */
+    bg-gradient-to-r
+    from-emah-orange
+    via-emah-orange
+    to-emah-orange-dark;
+}

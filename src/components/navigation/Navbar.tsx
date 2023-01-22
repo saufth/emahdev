@@ -4,12 +4,23 @@ import Image from 'next/image'
 import Link from 'next/link'
 // Styles
 import styles from '../../styles/navigation/Navbar.module.css'
+// Types
+import { Theme } from '../../types/theme'
+
+const themeConfig = {
+  light: {
+    logo: '/images/logotype/logomark-white.svg'
+  },
+  dark: {
+    logo: '/images/logotype/logomark.svg'
+  }
+}
 
 /**
  * The main navbar of application
  * @returns Navbar component
  */
-const Navbar = () => {
+const Navbar = ({ theme = 'light' }: Theme) => {
   return (
     <header className={styles.navbar}>
 
@@ -21,7 +32,7 @@ const Navbar = () => {
               <div className={styles.logo}>
                 <Image
                   alt='emah logomark'
-                  src='/images/logotype/logomark-white.svg'
+                  src={themeConfig[theme].logo}
                   width={64}
                   height={48}
                   priority
@@ -31,7 +42,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <CallToAction />
+          <CallToAction theme={theme} />
 
         </ul>
       </nav>

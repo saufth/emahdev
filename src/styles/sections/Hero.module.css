@@ -21,7 +21,32 @@
   @apply
     /* Typography */
     font-proxima-soft-medium
-    text-white
     text-center
     tracking-wide md:tracking-widest;
+}
+
+.themeDark {
+  @apply
+    /* Typography */
+    text-emah-dark;
+}
+
+.textLarge {
+  @apply
+    /* Typography */
+    text-5xl md:text-6xl;
+}
+
+.textMedium {
+  @apply
+    /* Typography */
+    text-4xl md:text-5xl;
+}
+
+.space {
+  @apply
+    /* Typography */
+    max-w-3xl
+    mx-auto
+    px-6;
 }

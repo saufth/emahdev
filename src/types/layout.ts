@@ -1,8 +1,8 @@
 // Types
 import { ReactNode } from 'react'
 
-/** A parent component that contain children */
-export interface Parent {
+/** The parent props */
+export interface ParentProps {
   /** The children of parent component */
   children: ReactNode
 }
@@ -41,7 +41,7 @@ export interface AligmentConfig {
 }
 
 /** Container component props */
-export interface ContainerProps extends Parent {
+export interface ContainerProps extends ParentProps {
   /** Set max width defined on styles and margin X auto */
   auto?: boolean
   /** Set height to 100% */

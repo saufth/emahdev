@@ -1,8 +1,8 @@
 .buttonContainer {
   @apply
     /* Sizing */
-    w-36
-    h-10
+    w-32 md:w-36
+    h-9 md:h-10
     /* Layout */
     relative
     overflow-hidden
@@ -17,8 +17,21 @@
     h-full
     /* Typography */
     font-proxima-soft-semibold
-    text-sm
+    text-xs md:text-sm;
+}
+
+.buttonLight {
+  @apply
+    /* Typography */
     text-emah-gray
     /* Background */
     bg-white;
+}
+
+.buttonDark {
+  @apply
+    /* Typography */
+    text-white
+    /* Background */
+    bg-emah-blue-light;
 }

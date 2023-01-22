@@ -17,7 +17,7 @@ const WhatWeDo = () => {
         <p className={styles.description}>
           Impulsamos empresas con visión, a fin de crear un legado de progreso y verdad.
         </p>
-        <Link href='#'>
+        <Link href='nosotros'>
           Ver más
         </Link>
       </div>
@@ -40,7 +40,7 @@ const WhatWeDo = () => {
       </div>
       <div id='about' className='h-xl grid place-content-center'>
         <div className='text-center space-y-3'>
-          <h2 className='text-lg md:text-xl'>
+          <h2 className='text-lg md:text-xl text-white/80'>
             Filosofía
           </h2>
           <p className='font-proxima-soft-medium text-5xl md:text-6xl'>

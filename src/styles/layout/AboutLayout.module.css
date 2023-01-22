@@ -1,0 +1,41 @@
+.scrollable {
+  @apply
+    /* Sizing */
+    w-full
+    /* Layout */
+    fixed
+    top-0
+    left-0
+    overflow-hidden
+    /* Interactivity */
+    will-change-transform;
+}
+
+.imageContainer {
+  @apply
+    /* Sizing */
+    max-w-3xl
+    h-2xl sm:h-md
+    /* Spacing */
+    mx-auto
+    /* Layout */
+    fixed
+    top-[90%]
+    left-0
+    right-0
+    z-10
+    overflow-hidden
+    /* Flexbox & Grid */
+    grid
+    place-content-center
+    /* Border */
+    rounded-[3rem]
+    /* Interactivity */
+    will-change-transform;
+}
+
+.image {
+  @apply
+    /* Sizing */
+    w-[250%];
+}

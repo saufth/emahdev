@@ -30,17 +30,12 @@
 
 .logo {
   @apply
-    /* Flexbox & Grid */
-    flex
-    justify-start
-    items-center
-    gap-x-6
-    /* Layout */
-    -z-10;
+    /* Sizing */
+    w-9 md:w-11;  
 }
 
 .logomark {
   @apply
     /* Sizing */
-    w-9 md:w-11;
+    w-full;
 }
