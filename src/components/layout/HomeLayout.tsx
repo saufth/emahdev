@@ -1,26 +1,22 @@
 // React
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 // Hooks
+import usePhysics from '../../modules/animation/hooks/usePhysics'
 import useRefDimensions from '../../modules/sizing/hooks/useRefDimensions'
 // Animation
 import { useScroll, useTransform, useSpring, motion } from 'framer-motion'
 // Utils
 // import dynamic from 'next/dynamic'
-// Config
-import { physicsConfig, physicsMobileConfig } from '../../modules/animation/config'
 // Styles
 import styles from '../../styles/layout/HomeLayout.module.css'
 // Types
 import { ParentProps } from '../../types/layout'
 import Navbar from '../navigation/Navbar'
-import { Physics } from '../../types/animation'
 
 /** Sphere component */
 // const Sphere = dynamic(() => import('../animation/Sphere'), {
 //   ssr: false
 // })
-
-const sizeLimit = 768
 
 /**
  * Create a scrolleable container with ease effect for Home page
@@ -29,10 +25,11 @@ const sizeLimit = 768
  * @returns The About page layout component
  */
 const HomeLayout = ({ children }: ParentProps) => {
-  const [physics, setPhysics] = useState<Physics>(physicsConfig)
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  const { width, height } = useRefDimensions(scrollRef)
+  const physics = usePhysics(scrollRef)
+
+  const { height } = useRefDimensions(scrollRef)
 
   const { scrollY } = useScroll()
 
@@ -41,11 +38,6 @@ const HomeLayout = ({ children }: ParentProps) => {
 
   // const transformSphere = useTransform(scrollY, [0, (height * 1.88)], [0, -height])
   // const springSphere = useSpring(transformSphere, physics)
-
-  useEffect(() => {
-    const currentPhysics = width >= sizeLimit ? physicsConfig : physicsMobileConfig
-    setPhysics(currentPhysics)
-  }, [physics, width])
 
   return (
     <>

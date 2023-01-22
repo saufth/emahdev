@@ -100,7 +100,8 @@ module.exports = {
         hero: "url('/images/sections/hero/hero.png')",
         branding: "url('/images/sections/whatwedo/branding.jpg')",
         design: "url('/images/sections/whatwedo/design.jpg')",
-        development: "url('/images/sections/whatwedo/development.jpg')"
+        development: "url('/images/sections/whatwedo/development.jpg')",
+        about: "url('/images/sections/about/hero.jpg')"
       },
       transitionDelay: {
         600: '600ms'

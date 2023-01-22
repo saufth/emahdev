@@ -15,9 +15,9 @@
   @apply
     /* Sizing */
     max-w-3xl
-    h-2xl sm:h-md
+    h-xl sm:h-md
     /* Spacing */
-    mx-auto
+    mx-4 md:mx-auto
     /* Layout */
     fixed
     top-[90%]
@@ -26,8 +26,12 @@
     z-10
     overflow-hidden
     /* Flexbox & Grid */
-    grid
-    place-content-center
+    /* grid
+    place-content-center */
+    /* Background*/
+    bg-about
+    bg-cover
+    bg-center
     /* Border */
     rounded-[3rem]
     /* Interactivity */

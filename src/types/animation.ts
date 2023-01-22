@@ -11,9 +11,7 @@ export interface Physics {
   stiffness: number
 }
 
-/**
- * Used to configure the magnetic field animation
- */
+/** Used to configure the magnetic field animation */
 export interface MagneticProps {
   /** The magnetic field ref for a div */
   fieldRef?: RefObject<HTMLDivElement>
@@ -27,11 +25,17 @@ export interface MagneticProps {
   layout?: MousePositionLayout
 }
 
+/** Define a type for x, y and z axis  */
 export interface Axis {
+  /** X axis */
   x: number
+  /** Y axis */
   y: number
+  /** Z axis */
+  z?: number
 }
 
+/** Using for animations and transitions */
 export interface Transformable {
   transition: Axis
   rotation: Axis

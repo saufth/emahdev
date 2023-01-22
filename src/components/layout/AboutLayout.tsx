@@ -1,18 +1,17 @@
 // Components
+import Image from 'next/image'
 import Navbar from '../navigation/Navbar'
 // React
 import { useRef } from 'react'
 // Hooks
+import usePhysics from '../../modules/animation/hooks/usePhysics'
 import useRefDimensions from '../../modules/sizing/hooks/useRefDimensions'
 // Animation
 import { useScroll, useTransform, useSpring, motion } from 'framer-motion'
-// Config
-import { physicsConfig } from '../../modules/animation/config'
 // Styles
 import styles from '../../styles/layout/AboutLayout.module.css'
 // Types
 import { ParentProps } from '../../types/layout'
-import Image from 'next/image'
 
 /**
  * A scrolleable container with ease effect for About page
@@ -23,15 +22,17 @@ import Image from 'next/image'
 const AboutLayout = ({ children }: ParentProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
 
+  const physics = usePhysics(scrollRef)
+
   const { height } = useRefDimensions(scrollRef)
 
   const { scrollY } = useScroll()
 
   const transformContainer = useTransform(scrollY, [0, height], [0, -height])
-  const springContainer = useSpring(transformContainer, physicsConfig)
+  const springContainer = useSpring(transformContainer, physics)
 
   const transformImage = useTransform(scrollY, [0, (height * 0.8)], [0, -height])
-  const springImage = useSpring(transformImage, physicsConfig)
+  const springImage = useSpring(transformImage, physics)
 
   return (
     <>
@@ -42,19 +43,27 @@ const AboutLayout = ({ children }: ParentProps) => {
         ref={scrollRef}
       >
         {children}
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         {children}
         {children}
         {children}
       </motion.div>
 
       <motion.div className={styles.imageContainer} style={{ y: springImage }}>
-        <Image
+        {/* <Image
           src='/images/sections/about/hero.jpg'
           alt='About emah'
           width={1920}
           height={1080}
           className={styles.image}
-        />
+        /> */}
       </motion.div>
 
       <div style={{ height }} />
