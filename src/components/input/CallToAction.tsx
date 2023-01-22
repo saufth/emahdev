@@ -3,9 +3,7 @@ import styles from '../../styles/input/CallToAction.module.css'
 // Types
 import { Theme } from '../../types/theme'
 
-/** The primary action of the application */
-const handleAction = () => alert('Primary action dene!')
-
+/** Theme configuration for CallToAction */
 const themeConfig = {
   light: styles.buttonLight,
   dark: styles.buttonDark
@@ -17,6 +15,9 @@ const themeConfig = {
  */
 const CallToAction = ({ theme = 'light' }: Theme) => {
   const buttonStyle = `${styles.button} ${themeConfig[theme]}`
+
+  /** The primary action of the application */
+  const handleAction = () => alert('Primary action dene!')
 
   return (
     <div className={styles.buttonContainer}>

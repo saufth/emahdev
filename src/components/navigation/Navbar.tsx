@@ -7,6 +7,7 @@ import styles from '../../styles/navigation/Navbar.module.css'
 // Types
 import { Theme } from '../../types/theme'
 
+/** Theme configuration for Navbar */
 const themeConfig = {
   light: {
     logo: '/images/logotype/logomark-white.svg'

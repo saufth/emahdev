@@ -7,7 +7,7 @@ import useRefDimensions from '../../modules/sizing/hooks/useRefDimensions'
 // Animation
 import { useScroll, useTransform, useSpring, motion } from 'framer-motion'
 // Config
-import { physics } from '../../modules/animation/config'
+import { physicsConfig } from '../../modules/animation/config'
 // Styles
 import styles from '../../styles/layout/AboutLayout.module.css'
 // Types
@@ -28,10 +28,10 @@ const AboutLayout = ({ children }: ParentProps) => {
   const { scrollY } = useScroll()
 
   const transformContainer = useTransform(scrollY, [0, height], [0, -height])
-  const springContainer = useSpring(transformContainer, physics)
+  const springContainer = useSpring(transformContainer, physicsConfig)
 
   const transformImage = useTransform(scrollY, [0, (height * 0.8)], [0, -height])
-  const springImage = useSpring(transformImage, physics)
+  const springImage = useSpring(transformImage, physicsConfig)
 
   return (
     <>
