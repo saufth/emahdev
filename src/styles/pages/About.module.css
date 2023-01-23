@@ -8,7 +8,7 @@
   @apply
     /* Spacing */
     px-4
-    mt-[1240px] sm:mt-[840px];
+    mt-[1024px] sm:mt-[840px];
 }
 
 .header {
