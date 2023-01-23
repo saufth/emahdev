@@ -6,7 +6,7 @@ import useRefDimensions from '../../modules/sizing/hooks/useRefDimensions'
 // Animation
 import { useScroll, useTransform, useSpring, motion } from 'framer-motion'
 // Utils
-// import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
 // Styles
 import styles from '../../styles/layout/HomeLayout.module.css'
 // Types
@@ -14,9 +14,9 @@ import { ParentProps } from '../../types/layout'
 import Navbar from '../navigation/Navbar'
 
 /** Sphere component */
-// const Sphere = dynamic(() => import('../animation/Sphere'), {
-//   ssr: false
-// })
+const Sphere = dynamic(() => import('../animation/Sphere'), {
+  ssr: false
+})
 
 /**
  * Create a scrolleable container with ease effect for Home page
@@ -36,8 +36,8 @@ const HomeLayout = ({ children }: ParentProps) => {
   const transformContainer = useTransform(scrollY, [0, height], [0, -height])
   const springContainer = useSpring(transformContainer, physics)
 
-  // const transformSphere = useTransform(scrollY, [0, (height * 1.88)], [0, -height])
-  // const springSphere = useSpring(transformSphere, physics)
+  const transformSphere = useTransform(scrollY, [0, (height * 1.88)], [0, -height])
+  const springSphere = useSpring(transformSphere, physics)
 
   return (
     <>
@@ -50,12 +50,12 @@ const HomeLayout = ({ children }: ParentProps) => {
         {children}
       </motion.div>
 
-      {/* <motion.div
+      <motion.div
         className={styles.sphere}
         style={{ y: springSphere }}
       >
         <Sphere />
-      </motion.div> */}
+      </motion.div>
 
       <div className={styles.background} />
 
