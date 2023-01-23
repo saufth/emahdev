@@ -1,12 +1,9 @@
 // Components
 import NextLink from 'next/link'
 // Styles
-// import styles from '../../styles/input/Link.module.css'
-
-interface LinkProps {
-  children: string
-  href: string
-}
+import styles from '../../styles/navigation/Link.module.css'
+// Types
+import { LinkProps } from '../../types/navigation'
 
 /**
  * Used to navigate between pages
@@ -15,7 +12,7 @@ interface LinkProps {
 const Link = ({ children, href }: LinkProps) => {
   return (
     <NextLink href={href}>
-      <div className='px-[27px] py-3 border border-white/50 rounded-[47px]'>
+      <div className={styles.link}>
         {children}
       </div>
     </NextLink>

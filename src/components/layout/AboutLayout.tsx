@@ -31,7 +31,7 @@ const AboutLayout = ({ children }: ParentProps) => {
   const transformContainer = useTransform(scrollY, [0, height], [0, -height])
   const springContainer = useSpring(transformContainer, physics)
 
-  const transformImage = useTransform(scrollY, [0, (height * 0.8)], [0, -height])
+  const transformImage = useTransform(scrollY, [0, (height * 1.4)], [0, -height])
   const springImage = useSpring(transformImage, physics)
 
   return (
@@ -42,17 +42,6 @@ const AboutLayout = ({ children }: ParentProps) => {
         style={{ y: springContainer }}
         ref={scrollRef}
       >
-        {children}
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        {children}
-        {children}
         {children}
       </motion.div>
 

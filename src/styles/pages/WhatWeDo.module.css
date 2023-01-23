@@ -43,3 +43,34 @@
     mt-64
     space-y-28 md:space-y-48;
 }
+
+.philosophy {
+  @apply 
+    /* Sizing */
+    h-xl
+    /* Flexbox & Grid */
+    grid
+    place-content-center;
+}
+
+.philosophyHeader {
+  @apply 
+    /* Spacing */
+    space-y-3
+    /* Typography */
+    text-center;
+}
+
+.philosophyHeading {
+  @apply 
+    /* Typography */
+    text-base sm:text-lg md:text-xl
+    text-white/80;
+}
+
+.philosophyDescription {
+  @apply 
+    /* Typography */
+    font-proxima-soft-medium
+    text-4xl sm:text-5xl md:text-6xl;
+}

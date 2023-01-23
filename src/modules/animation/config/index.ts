@@ -3,7 +3,7 @@ import { Physics } from '../../../types/animation'
 
 /** Used to create a smooth scroll */
 export const physicsConfig: Physics = {
-  damping: 33,
+  damping: 18,
   mass: 1,
   stiffness: 33
 }

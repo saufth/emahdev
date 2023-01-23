@@ -1,9 +1,16 @@
+// Types
+import { Theme } from './theme'
+
 /** Showcase component props */
-export interface ShowcaseProps {
+export interface ShowcaseProps extends Theme {
   /** Heading of the showcase */
   heading: string
   /** Description of the showcase */
-  description: string
+  descriptions: string[]
   /** Image to use on the showcase */
-  image: 'branding' | 'design' | 'development'
+  image: 'design' | 'branding' | 'development'
+  /** Set the call to action button */
+  action?: boolean
+  /** Invert the order of content */
+  reverse?: boolean
 }

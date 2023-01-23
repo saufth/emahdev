@@ -13,33 +13,55 @@ const imagesConfig = {
 }
 
 /**
- * Using to show a image with a heading and a description
+ * Using to show a image with a heading and descriptions
  * @see {@link ShowcaseProps} for props specifications
  * @param {ShowcaseProps} ShowcaseProps The component props
  * @returns The Showcase component
  */
-const Showcase = ({ heading, description, image }: ShowcaseProps) => {
+const Showcase = (
+  {
+    heading,
+    descriptions,
+    image,
+    theme = 'light',
+    action,
+    reverse
+  }: ShowcaseProps
+) => {
+  // Theme
+  const isThemeLight = theme === 'light'
+  const headingStyle = isThemeLight ? '' : styles.headingDark
+  const descriptionsStyle = `${styles.descriptions} ${isThemeLight ? '' : styles.descriptionsDark}`
+  // Reverse
+  const containerStyle = `${styles.container} ${reverse ? styles.containerReverse : ''}`
+  const demoStyle = `${styles.demo} ${reverse ? styles.demoReverse : ''}`
+  const imageContainerStyle = `${styles.imageContainer} ${reverse ? styles.imageContainerReverse : ''}`
+  // Image
   const imageStyle = `${styles.image} ${imagesConfig[image]}`
 
   return (
-    <section className={styles.container}>
+    <section className={containerStyle}>
 
       <div>
-        <div className={styles.demo}>
+        <div className={demoStyle}>
           <div className={styles.header}>
-            <h2 className={styles.heading}>
+            <h2 className={headingStyle}>
               {heading}
             </h2>
-            <p className={styles.description}>
-              {description}
-            </p>
+            <div className={descriptionsStyle}>
+              {descriptions.map((description, key) => (
+                <p key={key}>
+                  {description}
+                </p>
+              ))}
+            </div>
           </div>
-          <CallToAction />
+          {action ? <CallToAction /> : null}
         </div>
       </div>
 
       <div>
-        <div className={styles.imageContainer}>
+        <div className={imageContainerStyle}>
           <div className={imageStyle} />
         </div>
       </div>

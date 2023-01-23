@@ -45,8 +45,9 @@
 
 .space {
   @apply
-    /* Typography */
+    /* Sizing */
     max-w-3xl
     mx-auto
+    /* Spacing */
     px-6;
 }
