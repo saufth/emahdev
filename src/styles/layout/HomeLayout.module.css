@@ -18,7 +18,7 @@
     h-lg sm:h-xl md:h-2xl lg:h-3xl
     /* Layout */
     fixed
-    top-96 lg:top-72
+    top-[420px] lg:top-72
     left-0
     -z-40
     /* Interactivity */
