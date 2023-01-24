@@ -46,8 +46,8 @@ const HomeLayout = ({ children }: ParentProps) => {
   const springSphere = useSpring(transformSphere, physics)
 
   useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
-    latestScrollY <= 1640 && sphereY.set(latestScrollY)
-    latestScrollY >= 3600 && sphereY.set(0)
+    latestScrollY <= 1280 && sphereY.set(latestScrollY)
+    latestScrollY >= 3600 && sphereY.set(240)
   })
 
   return (

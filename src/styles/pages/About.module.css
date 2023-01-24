@@ -8,7 +8,7 @@
   @apply
     /* Spacing */
     px-4
-    pb-6
+    pb-16
     mt-[1024px] sm:mt-[840px];
 }
 
