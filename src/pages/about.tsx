@@ -103,6 +103,7 @@ const AboutPage = () => {
                 descriptions={about.descriptions}
                 image={about.image}
                 theme='dark'
+                large
                 reverse={key % 2 !== 0}
                 key={key}
               />

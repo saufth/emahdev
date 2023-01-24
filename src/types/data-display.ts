@@ -11,6 +11,8 @@ export interface ShowcaseProps extends Theme {
   image: 'design' | 'branding' | 'development'
   /** Set the call to action button */
   action?: boolean
+  /** Set the demo width to large */
+  large?: boolean
   /** Invert the order of content */
   reverse?: boolean
 }

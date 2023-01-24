@@ -25,6 +25,7 @@ const Showcase = (
     image,
     theme = 'light',
     action,
+    large,
     reverse
   }: ShowcaseProps
 ) => {
@@ -34,7 +35,7 @@ const Showcase = (
   const descriptionsStyle = `${styles.descriptions} ${isThemeLight ? '' : styles.descriptionsDark}`
   // Reverse
   const containerStyle = `${styles.container} ${reverse ? styles.containerReverse : ''}`
-  const demoStyle = `${styles.demo} ${reverse ? styles.demoReverse : ''}`
+  const demoStyle = `${styles.demo} ${reverse ? styles.demoReverse : ''} ${large ? styles.demoLarge : ''}`
   const imageContainerStyle = `${styles.imageContainer} ${reverse ? styles.imageContainerReverse : ''}`
   // Image
   const imageStyle = `${styles.image} ${imagesConfig[image]}`

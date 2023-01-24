@@ -34,6 +34,12 @@
     gap-y-7 md:gap-y-8;
 }
 
+.demoLarge {
+  @apply
+    /* Sizing */
+    md:w-5/6 lg:w-3/4;
+}
+
 .demoReverse {
   @apply
     /* Layout */
@@ -43,7 +49,7 @@
 .header {
   @apply
     /* Spacing */
-    space-y-3 md:space-y-4;
+    space-y-5 md:space-y-6;
 }
 
 .headingDark {
@@ -55,10 +61,10 @@
 .descriptions {
   @apply
     /* Spacing */
-    space-y-2.5 sm:space-y-3
+    space-y-3 sm:space-y-4
     /* Typography */
-    font-proxima-soft-semibold
-    text-sm md:text-[15px] lg:text-base
+    font-proxima-soft-medium md:font-proxima-soft-semibold
+    text-[15px] lg:text-lg
     leading-none;
 }
 
@@ -71,7 +77,7 @@
 .imageContainer {
   @apply
     /* Sizing */
-    w-full md:w-md
+    w-full md:w-sm lg:w-md
     h-full
     /* Flexbox & Grid */
     relative
