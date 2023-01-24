@@ -5,7 +5,7 @@ import Navbar from '../navigation/Navbar'
 import { useRef } from 'react'
 // Hooks
 import usePhysics from '../../modules/animation/hooks/usePhysics'
-import useRefDimensions from '../../modules/sizing/hooks/useRefDimensions'
+import useDimensions from '../../modules/sizing/hooks/useDimensions'
 // Animation
 import { useScroll, useTransform, useSpring, motion } from 'framer-motion'
 // Styles
@@ -22,16 +22,15 @@ import { ParentProps } from '../../types/layout'
 const AboutLayout = ({ children }: ParentProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  const physics = usePhysics(scrollRef)
-
-  const { height } = useRefDimensions(scrollRef)
+  const { height: documentHeight } = useDimensions(scrollRef)
 
   const { scrollY } = useScroll()
+  const physics = usePhysics()
 
-  const transformContainer = useTransform(scrollY, [0, height], [0, -height])
+  const transformContainer = useTransform(scrollY, [0, documentHeight], [0, -documentHeight])
   const springContainer = useSpring(transformContainer, physics)
 
-  const transformImage = useTransform(scrollY, [0, (height * 1.4)], [0, -height])
+  const transformImage = useTransform(scrollY, [0, (documentHeight * 1.4)], [0, -documentHeight])
   const springImage = useSpring(transformImage, physics)
 
   return (
@@ -55,7 +54,7 @@ const AboutLayout = ({ children }: ParentProps) => {
         /> */}
       </motion.div>
 
-      <div style={{ height }} />
+      <div style={{ height: documentHeight }} />
     </>
   )
 }

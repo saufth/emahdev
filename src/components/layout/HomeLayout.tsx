@@ -2,9 +2,16 @@
 import { useRef } from 'react'
 // Hooks
 import usePhysics from '../../modules/animation/hooks/usePhysics'
-import useRefDimensions from '../../modules/sizing/hooks/useRefDimensions'
+import useDimensions from '../../modules/sizing/hooks/useDimensions'
 // Animation
-import { useScroll, useTransform, useSpring, motion } from 'framer-motion'
+import {
+  useScroll,
+  useTransform,
+  useSpring,
+  motion,
+  useMotionValueEvent,
+  useMotionValue
+} from 'framer-motion'
 // Utils
 import dynamic from 'next/dynamic'
 // Styles
@@ -25,19 +32,23 @@ const Sphere = dynamic(() => import('../animation/Sphere'), {
  * @returns The About page layout component
  */
 const HomeLayout = ({ children }: ParentProps) => {
-  const scrollRef = useRef<HTMLDivElement>(null)
-
-  const physics = usePhysics(scrollRef)
-
-  const { height } = useRefDimensions(scrollRef)
-
+  // Scroll
   const { scrollY } = useScroll()
-
+  const physics = usePhysics()
+  // Document
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const { height } = useDimensions(scrollRef)
   const transformContainer = useTransform(scrollY, [0, height], [0, -height])
   const springContainer = useSpring(transformContainer, physics)
-
-  const transformSphere = useTransform(scrollY, [0, (height * 1.88)], [0, -height])
+  // Sphere
+  const sphereY = useMotionValue(0)
+  const transformSphere = useTransform(sphereY, [0, (height * 1.88)], [0, -height])
   const springSphere = useSpring(transformSphere, physics)
+
+  useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
+    latestScrollY <= 1640 && sphereY.set(latestScrollY)
+    latestScrollY >= 3600 && sphereY.set(0)
+  })
 
   return (
     <>

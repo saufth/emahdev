@@ -1,7 +1,7 @@
 // React
-import { RefObject, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 // Hooks
-import useRefDimensions from '../../sizing/hooks/useRefDimensions'
+import useDimensions from '../../sizing/hooks/useDimensions'
 // Config
 import { physicsConfig, physicsMobileConfig } from '../config'
 // Types
@@ -11,13 +11,12 @@ const sizeLimit = 768
 
 /**
  * Used to define de physics configuration when width change
- * @param ref A div reference
  * @returns Physics configuration
  */
-const usePhysics = (ref: RefObject<HTMLDivElement>) => {
+const usePhysics = () => {
   const [physics, setPhysics] = useState<Physics>(physicsConfig)
 
-  const { width } = useRefDimensions(ref)
+  const { width } = useDimensions()
 
   useEffect(() => {
     const currentPhysics = width >= sizeLimit ? physicsConfig : physicsMobileConfig

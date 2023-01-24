@@ -1,7 +1,7 @@
 // React
 import { useEffect, useRef } from 'react'
 // Hooks
-import useRefDimensions from '../../sizing/hooks/useRefDimensions'
+import useDimensions from '../../sizing/hooks/useDimensions'
 import useRefMousePosition from '../../input/hooks/useRefMousePosition'
 // Types
 import { MagneticProps, Transformable } from '../../../types/animation'
@@ -32,7 +32,7 @@ const useRefMagnetic = (
   const magneticField = fieldRef || magnetRef
 
   const mousePosition = useRefMousePosition(magneticField, layout)
-  const dimensions = useRefDimensions(magneticField)
+  const dimensions = useDimensions(magneticField)
 
   useEffect(() => {
     const halfWidth = dimensions.width / 2

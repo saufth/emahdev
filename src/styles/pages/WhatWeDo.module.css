@@ -41,7 +41,7 @@
   @apply
     /* Spacing */
     mt-64
-    space-y-28 md:space-y-48;
+    space-y-14 md:space-y-28;
 }
 
 .philosophy {
