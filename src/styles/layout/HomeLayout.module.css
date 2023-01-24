@@ -16,9 +16,12 @@
     /* Sizing */
     w-full
     h-lg sm:h-xl md:h-2xl lg:h-3xl
+    /* Spacing */
+    my-auto
     /* Layout */
     fixed
-    top-[420px] lg:top-72
+    top-0
+    bottom-0
     left-0
     -z-40
     /* Interactivity */
