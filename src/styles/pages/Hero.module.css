@@ -47,7 +47,5 @@
   @apply
     /* Sizing */
     max-w-3xl
-    mx-auto
-    /* Spacing */
-    px-[5%];
+    mx-auto;
 }

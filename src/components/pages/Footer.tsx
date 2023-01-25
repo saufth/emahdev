@@ -10,7 +10,7 @@ import { Theme } from '../../types/theme'
  * @returns Footer section component
  */
 const Footer = ({ theme = 'light' }: Theme) => {
-  const footerStyle = `${styles.footer} ${theme === 'dark' ? styles.footerDark : ''}`
+  const footerStyle = theme === 'dark' ? styles.footerDark : ''
   return (
     <footer className={footerStyle}>
       <div id='about' className={styles.philosophy}>
