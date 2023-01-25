@@ -29,7 +29,7 @@
     /* Flexbox & Grid */
     flex flex-col
     md:justify-center
-    gap-y-8 md:gap-y-10;
+    gap-y-8 md:gap-y-12;
 }
 
 .demoLarge {
