@@ -13,16 +13,12 @@ const navigationOptions: LinkProps[] = [
     href: '/'
   },
   {
-    children: 'Servicios',
-    href: '/#whatwedo'
-  },
-  {
     children: 'Nosotros',
-    href: '/nosotros'
+    href: '/about'
   },
   {
     children: 'Contacto',
-    href: '/contacto'
+    href: '/contact'
   }
 ]
 

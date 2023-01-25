@@ -2,15 +2,13 @@
   @apply
     /* Sizing */
     w-full
-    h-3xl
+    h-auto md:h-3xl
     [&>div]:w-full [&>div]:md:w-1/2
-    [&>div]:h-1/2 [&>div]:md:h-full
+    [&>div]:h-auto [&>div]:md:h-full
     /* Spacing */
-    [&>div]:py-5
-    [&>div]:md:px-5
+    [&>div]:py-5 [&>div]:md:px-5
     /* Flexbox & Grid */
-    flex
-    flex-col-reverse md:flex-row;
+    flex flex-col-reverse md:flex-row;
 }
 
 .containerReverse {
@@ -29,8 +27,7 @@
     /* Layout */
     md:float-right
     /* Flexbox & Grid */
-    flex
-    flex-col
+    flex flex-col
     md:justify-center
     gap-y-7 md:gap-y-8;
 }
