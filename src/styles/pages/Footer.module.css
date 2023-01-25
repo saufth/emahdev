@@ -24,14 +24,14 @@
 .philosophyHeading {
   @apply 
     /* Typography */
-    text-xl md:text-2xl
+    text-lg md:text-xl
     opacity-80;
 }
 
 .philosophyDescription {
   @apply 
     /* Typography */
-    font-proxima-soft-semibold md:font-proxima-soft-medium
+    font-proxima-soft-medium
     text-5xl md:text-6xl;
 }
 
