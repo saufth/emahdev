@@ -25,10 +25,10 @@ const Footer = ({ theme = 'light' }: Theme) => {
         </div>
       </div>
       <div className={styles.foot}>
-        <div className='text-lg md:text-xl file:underline'>
+        <div className='text-xl file:underline'>
           info@emah.mx
         </div>
-        <div className='text-base'>
+        <div className='text-lg'>
           555-555-55-55
         </div>
         <div className='mt-4 px-4 md:hidden w-full'>
