@@ -15,14 +15,15 @@ const themeConfig = {
  * @param {CallToActionProps} CallToActionProps The component props
  * @returns The CallToAction component
  */
-const CallToAction = ({ fullWidth, theme = 'light' }: CallToActionProps) => {
-  const buttonStyle = `${styles.button} ${themeConfig[theme]} ${fullWidth ? styles.fullWidth : ''}`
+const CallToAction = ({ large, theme = 'light' }: CallToActionProps) => {
+  const buttonContainerStyle = `${styles.buttonContainer} ${large ? styles.large : ''}`
+  const buttonStyle = `${styles.button} ${themeConfig[theme]}`
 
   /** The primary action of the application */
   const handleAction = () => alert('Primary action dene!')
 
   return (
-    <div className={styles.buttonContainer}>
+    <div className={buttonContainerStyle}>
       <button className={buttonStyle} onClick={handleAction}>
         Contáctanos
       </button>

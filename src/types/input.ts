@@ -6,6 +6,6 @@ export type MousePositionLayout = 'screen' | 'offset' |'client'
 
 /** The CallToAction component props */
 export interface CallToActionProps extends Theme {
-  /** Set button width to 100% */
-  fullWidth?: boolean
+  /** Set button width to 100% and height large */
+  large?: boolean
 }
