@@ -7,7 +7,7 @@
 .philosophy {
   @apply 
     /* Sizing */
-    h-xl
+    h-md md:h-xl
     /* Flexbox & Grid */
     grid
     place-content-center;
