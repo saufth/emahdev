@@ -1,4 +1,5 @@
 // Components
+import Footer from '../components/pages/Footer'
 import Hero from '../components/pages/Hero'
 import HomeLayout from '../components/layout/HomeLayout'
 import WhatWeDo from '../components/pages/Home/WhatWeDo'
@@ -19,6 +20,7 @@ const HomePage = () => {
           </Hero>
           <WhatWeDo />
         </main>
+        <Footer />
       </HomeLayout>
     </>
   )

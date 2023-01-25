@@ -1,5 +1,6 @@
 // Components
 import AboutLayout from '../components/layout/AboutLayout'
+import Footer from '../components/pages/Footer'
 import Hero from '../components/pages/Hero'
 import Showcase from '../components/data-display/Showcase'
 // Styles
@@ -111,6 +112,7 @@ const AboutPage = () => {
           </div>
         </section>
       </main>
+      <Footer theme='dark' />
     </AboutLayout>
   )
 }

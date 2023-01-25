@@ -6,7 +6,8 @@
     [&>div]:w-full [&>div]:md:w-1/2
     [&>div]:h-1/2 [&>div]:md:h-full
     /* Spacing */
-    [&>div]:p-5
+    [&>div]:py-5
+    [&>div]:md:px-5
     /* Flexbox & Grid */
     flex
     flex-col-reverse md:flex-row;

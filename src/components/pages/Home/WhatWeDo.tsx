@@ -1,4 +1,4 @@
-// Styles
+// Components
 import Link from '../../navigation/Link'
 import Showcase from '../../data-display/Showcase'
 // Types
@@ -54,16 +54,6 @@ const WhatWeDo = () => {
             key={key}
           />
         ))}
-      </div>
-      <div id='about' className={styles.philosophy}>
-        <div className={styles.philosophyHeader}>
-          <h2 className={styles.philosophyHeading}>
-            Filosofía
-          </h2>
-          <p className={styles.philosophyDescription}>
-            Menos es más
-          </p>
-        </div>
       </div>
     </section>
   )

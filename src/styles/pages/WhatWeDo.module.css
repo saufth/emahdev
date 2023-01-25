@@ -29,7 +29,7 @@
     /* Sizing */
     max-w-5xl
     /* Spacing */
-    px-6
+    px-[5%]
     /* Typography */
     font-proxima-soft-medium
     text-3xl sm:text-4xl md:text-5xl
@@ -42,35 +42,4 @@
     /* Spacing */
     mt-64
     space-y-14 md:space-y-28;
-}
-
-.philosophy {
-  @apply 
-    /* Sizing */
-    h-2xl
-    /* Flexbox & Grid */
-    grid
-    place-content-center;
-}
-
-.philosophyHeader {
-  @apply 
-    /* Spacing */
-    space-y-3
-    /* Typography */
-    text-center;
-}
-
-.philosophyHeading {
-  @apply 
-    /* Typography */
-    text-base sm:text-lg md:text-xl
-    text-white/80;
-}
-
-.philosophyDescription {
-  @apply 
-    /* Typography */
-    font-proxima-soft-medium
-    text-4xl sm:text-5xl md:text-6xl;
 }
