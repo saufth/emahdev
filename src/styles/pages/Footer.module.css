@@ -38,7 +38,7 @@
 .foot {
   @apply
     /* Sizing */
-    max-w-sm
+    /* max-w-4xl */
     /* Spacing */
     pb-12
     mx-auto
@@ -47,4 +47,25 @@
     justify-center md:justify-between
     items-center
     gap-y-5;
+}
+
+.footNav {
+  @apply
+    /* Spacing */
+    flex
+    flex-col
+    gap-y-6;
+}
+
+.footNavList {
+  @apply
+    /* Spacing */
+    space-x-4 md:space-x-5
+    text-sm md:text-base;
+}
+
+.footNavAction {
+  @apply
+    /* Spacing */
+    md:hidden;
 }

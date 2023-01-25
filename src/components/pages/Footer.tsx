@@ -1,8 +1,30 @@
+// Components
+import CallToAction from '../input/CallToAction'
+import Link from 'next/link'
 // Styles
 import styles from '../../styles/pages/Footer.module.css'
 // Types
+import { LinkProps } from '../../types/navigation'
 import { Theme } from '../../types/theme'
-import CallToAction from '../input/CallToAction'
+
+const navigationOptions: LinkProps[] = [
+  {
+    children: 'Inicio',
+    href: '/'
+  },
+  {
+    children: 'Servicios',
+    href: '/#whatwedo'
+  },
+  {
+    children: 'Nosotros',
+    href: '/nosotros'
+  },
+  {
+    children: 'Contacto',
+    href: '/contacto'
+  }
+]
 
 /**
  * The footer section of application
@@ -28,12 +50,18 @@ const Footer = ({ theme = 'light' }: Theme) => {
         <div className='text-2xl underline'>
           info@emah.mx
         </div>
-        <div className='text-xl'>
-          555-555-55-55
-        </div>
-        <div className='mt-4 px-4 md:hidden w-full'>
-          <CallToAction large theme={theme} />
-        </div>
+        <nav aria-label='Directorio emah' className={styles.footNav}>
+          <div className={styles.footNavList}>
+            {navigationOptions.map(({ children, href }, key) => (
+              <Link href={href} key={key}>
+                {children}
+              </Link>
+            ))}
+          </div>
+          <div className={styles.footNavAction}>
+            <CallToAction large theme={theme} />
+          </div>
+        </nav>
       </div>
     </footer>
   )
