@@ -8,7 +8,7 @@
     /* Spacing */
     /* Flexbox & Grid */
     flex flex-col-reverse md:flex-row
-    md:gap-x-10 gap-y-10 md:gap-y-0;
+    md:gap-x-10 gap-y-6 md:gap-y-0;
 }
 
 .containerReverse {
@@ -29,7 +29,7 @@
     /* Flexbox & Grid */
     flex flex-col
     md:justify-center
-    gap-y-7 md:gap-y-8;
+    gap-y-6 md:gap-y-8;
 }
 
 .demoLarge {
