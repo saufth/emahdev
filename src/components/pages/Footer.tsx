@@ -31,7 +31,7 @@ const Footer = ({ theme = 'light' }: Theme) => {
         <div className='text-base'>
           555-555-55-55
         </div>
-        <div className='md:hidden'>
+        <div className='mt-4 md:hidden'>
           <CallToAction fullWidth theme={theme} />
         </div>
       </div>
