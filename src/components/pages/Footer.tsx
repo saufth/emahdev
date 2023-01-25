@@ -25,14 +25,14 @@ const Footer = ({ theme = 'light' }: Theme) => {
         </div>
       </div>
       <div className={styles.foot}>
-        <div className='text-lg md:text-xl underline'>
+        <div className='text-lg md:text-xl file:underline'>
           info@emah.mx
         </div>
         <div className='text-base'>
           555-555-55-55
         </div>
         <div className='md:hidden'>
-          <CallToAction theme={theme} />
+          <CallToAction fullWidth theme={theme} />
         </div>
       </div>
     </footer>

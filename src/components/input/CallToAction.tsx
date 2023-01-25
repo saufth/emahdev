@@ -1,7 +1,7 @@
 // Styles
 import styles from '../../styles/input/CallToAction.module.css'
 // Types
-import { Theme } from '../../types/theme'
+import { CallToActionProps } from '../../types/input'
 
 /** Theme configuration for CallToAction */
 const themeConfig = {
@@ -11,10 +11,12 @@ const themeConfig = {
 
 /**
  * The primary call to actions of the application
- * @returns CallToAction component
+ * @see {@link CallToActionProps} for props definition
+ * @param {CallToActionProps} CallToActionProps The component props
+ * @returns The CallToAction component
  */
-const CallToAction = ({ theme = 'light' }: Theme) => {
-  const buttonStyle = `${styles.button} ${themeConfig[theme]}`
+const CallToAction = ({ fullWidth, theme = 'light' }: CallToActionProps) => {
+  const buttonStyle = `${styles.button} ${themeConfig[theme]} ${fullWidth ? styles.fullWidth : ''}`
 
   /** The primary action of the application */
   const handleAction = () => alert('Primary action dene!')

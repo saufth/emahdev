@@ -10,6 +10,12 @@
     rounded-3xl;
 }
 
+.fullWidth {
+  @apply
+    /* Sizing */
+    w-full;
+}
+
 .button {
   @apply
     /* Sizing */
