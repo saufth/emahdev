@@ -25,8 +25,11 @@ const Footer = ({ theme = 'light' }: Theme) => {
         </div>
       </div>
       <div className={styles.foot}>
-        <div>
+        <div className='text-lg md:text-xl underline'>
           info@emah.mx
+        </div>
+        <div className='text-base'>
+          555-555-55-55
         </div>
         <div className='md:hidden'>
           <CallToAction theme={theme} />

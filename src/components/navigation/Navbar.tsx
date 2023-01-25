@@ -24,30 +24,22 @@ const themeConfig = {
 const Navbar = ({ theme = 'light' }: Theme) => {
   return (
     <header className={styles.navbar}>
-
-      <nav aria-label='emah Directorio' className={styles.nav}>
-        <ul className={styles.list}>
-
-          <div>
-            <Link href='/'>
-              <div className={styles.logo}>
-                <Image
-                  alt='emah logomark'
-                  src={themeConfig[theme].logo}
-                  width={64}
-                  height={48}
-                  priority
-                  className={styles.logomark}
-                />
-              </div>
-            </Link>
+      <div>
+        <Link href='/'>
+          <div className={styles.logo}>
+            <Image
+              alt='emah logomark'
+              src={themeConfig[theme].logo}
+              width={64}
+              height={48}
+              priority
+              className={styles.logomark}
+            />
           </div>
+        </Link>
+      </div>
 
-          <CallToAction theme={theme} />
-
-        </ul>
-      </nav>
-
+      <CallToAction theme={theme} />
     </header>
   )
 }

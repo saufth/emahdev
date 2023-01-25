@@ -2,23 +2,13 @@
   @apply
     /* Sizing */
     w-full
+    /* Spacing */
+    px-[5%]
+    py-3
     /* Layout */
     fixed
     top-0
     z-40
-    /* Spacing */
-    px-[5%]
-    py-3;
-}
-
-.nav {
-  @apply
-    /* Sizing */
-    w-full;
-}
-
-.list {
-  @apply
     /* Flexbox & Grid */
     flex
     justify-between

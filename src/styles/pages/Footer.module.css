@@ -37,14 +37,14 @@
 
 .foot {
   @apply
+    /* Sizing */
+    max-w-sm
     /* Spacing */
     pb-10
+    mx-auto
     /* Flexbox & Grid */
     flex flex-col md:flex-row
     justify-center md:justify-between
     items-center
-    gap-y-5
-    /* Typography */
-    text-lg md:text-xl
-    underline;
+    gap-y-5;
 }
