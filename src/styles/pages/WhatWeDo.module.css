@@ -40,5 +40,5 @@
   @apply
     /* Spacing */
     mt-24
-    space-y-24 md:space-y-0;
+    space-y-36 md:space-y-40;
 }

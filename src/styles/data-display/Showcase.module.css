@@ -2,13 +2,13 @@
   @apply
     /* Sizing */
     w-full
-    h-auto md:h-3xl
+    h-auto md:h-md lg:h-xl
     [&>div]:w-full [&>div]:md:w-1/2
     [&>div]:h-auto [&>div]:md:h-full
     /* Spacing */
-    [&>div]:py-5 [&>div]:md:px-5
     /* Flexbox & Grid */
-    flex flex-col-reverse md:flex-row;
+    flex flex-col-reverse md:flex-row
+    md:gap-x-10 gap-y-10 md:gap-y-0;
 }
 
 .containerReverse {
@@ -20,7 +20,7 @@
 .demo {
   @apply
     /* Sizing */
-    w-full md:w-2/3 lg:w-7/12
+    w-full lg:w-7/12
     h-full
     /* Spacing */
     px-4 md:px-0
@@ -76,9 +76,8 @@
   @apply
     /* Sizing */
     w-full md:w-sm lg:w-md
-    h-full
+    h-sm md:h-md lg:h-full
     /* Flexbox & Grid */
-    relative
     flex
     flex-col
     justify-center;
@@ -94,7 +93,7 @@
   @apply
     /* Sizing */
     w-full
-    h-lg lg:h-xl
+    h-full
     /* Border */
     rounded-[11%]
     /* Background */

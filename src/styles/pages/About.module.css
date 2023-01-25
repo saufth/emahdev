@@ -40,5 +40,6 @@
 .showcase {
   @apply
     /* Spacing */
-    mt-24;
+    mt-24
+    space-y-36 md:space-y-40;
 }
