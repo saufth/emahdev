@@ -6,6 +6,9 @@
     /* Layout */
     relative
     overflow-hidden
+    /* Typography */
+    font-proxima-soft-semibold
+    text-sm
     /* Border */
     rounded-3xl;
 }
@@ -14,17 +17,16 @@
   @apply
     /* Sizing */
     w-full
-    h-12;
+    h-12
+    /* Typography */
+    text-base;
 }
 
 .button {
   @apply
     /* Sizing */
     w-full
-    h-full
-    /* Typography */
-    font-proxima-soft-semibold
-    text-sm;
+    h-full;
 }
 
 .buttonLight {
