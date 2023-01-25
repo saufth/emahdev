@@ -45,6 +45,6 @@
     items-center
     gap-y-5
     /* Typography */
-    md:text-lg
+    text-lg md:text-xl
     underline;
 }

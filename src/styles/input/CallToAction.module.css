@@ -1,8 +1,8 @@
 .buttonContainer {
   @apply
     /* Sizing */
-    w-28 md:w-32
-    h-8 md:h-10
+    w-32
+    h-10
     /* Layout */
     relative
     overflow-hidden
@@ -17,7 +17,7 @@
     h-full
     /* Typography */
     font-proxima-soft-semibold
-    text-xs md:text-sm;
+    text-sm;
 }
 
 .buttonLight {
