@@ -38,7 +38,12 @@
 .foot {
   @apply
     /* Spacing */
-    py-6
+    pb-10
+    /* Flexbox & Grid */
+    flex flex-col md:flex-row
+    justify-center md:justify-between
+    items-center
+    gap-y-5
     /* Typography */
     md:text-lg
     underline;

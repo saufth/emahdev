@@ -2,6 +2,7 @@
 import styles from '../../styles/pages/Footer.module.css'
 // Types
 import { Theme } from '../../types/theme'
+import CallToAction from '../input/CallToAction'
 
 /**
  * The footer section of application
@@ -24,7 +25,12 @@ const Footer = ({ theme = 'light' }: Theme) => {
         </div>
       </div>
       <div className={styles.foot}>
-        info@emah.mx
+        <div>
+          info@emah.mx
+        </div>
+        <div className='md:hidden'>
+          <CallToAction theme={theme} />
+        </div>
       </div>
     </footer>
   )
