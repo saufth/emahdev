@@ -31,7 +31,7 @@
 .logo {
   @apply
     /* Sizing */
-    w-9 md:w-11;  
+    w-10 md:w-11;  
 }
 
 .logomark {
