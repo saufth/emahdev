@@ -1,7 +1,7 @@
 .section {
   @apply
     /* Spacing */
-    mt-52 md:mt-60;
+    mt-60;
 }
 
 .header {
