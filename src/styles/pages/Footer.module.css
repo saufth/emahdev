@@ -24,7 +24,7 @@
 .philosophyHeading {
   @apply 
     /* Typography */
-    text-base sm:text-lg md:text-xl
+    text-lg md:text-xl
     opacity-80;
 }
 
@@ -32,7 +32,7 @@
   @apply 
     /* Typography */
     font-proxima-soft-medium
-    text-4xl sm:text-5xl md:text-6xl;
+    text-5xl md:text-6xl;
 }
 
 .foot {
