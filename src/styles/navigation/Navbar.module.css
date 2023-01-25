@@ -22,10 +22,7 @@
     /* Flexbox & Grid */
     flex
     justify-between
-    items-center
-    /* Spacing */
-    pr-2 md:pr-0
-    gap-x-8 lg:gap-x-10;
+    items-center;
 }
 
 .logo {
