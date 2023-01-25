@@ -37,19 +37,20 @@ const HomeLayout = ({ children }: ParentProps) => {
   const physics = usePhysics()
   // Document
   const scrollRef = useRef<HTMLDivElement>(null)
-  const { height } = useDimensions(scrollRef)
+  const { width, height } = useDimensions(scrollRef)
   const transformContainer = useTransform(scrollY, [0, height], [0, -height])
   const springContainer = useSpring(transformContainer, physics)
   // Sphere
-  const sphereY = useMotionValue(768)
-  const transformSphere = useTransform(sphereY, [0, (768 * 1.9)], [0, 768])
+  const sphereTop = width >= 576 ? 768 : 576
+  const sphereY = useMotionValue(sphereTop)
+  const transformSphere = useTransform(sphereY, [0, (sphereTop * 1.9)], [0, sphereTop])
   const springSphere = useSpring(transformSphere, physics)
 
   useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
     if (latestScrollY <= (height * 0.118)) {
-      sphereY.set(768)
+      sphereY.set(sphereTop)
     } else if (latestScrollY >= (height * 0.77)) {
-      sphereY.set(768)
+      sphereY.set(sphereTop)
     } else {
       sphereY.set(0)
     }
