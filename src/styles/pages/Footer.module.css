@@ -37,8 +37,6 @@
 
 .foot {
   @apply
-    /* Sizing */
-    /* max-w-4xl */
     /* Spacing */
     pb-12
     mx-auto
@@ -47,6 +45,13 @@
     justify-center md:justify-between
     items-center
     gap-y-5;
+}
+
+.footMail {
+  @apply
+    /* Typography */
+    text-2xl
+    underline;
 }
 
 .footAction {

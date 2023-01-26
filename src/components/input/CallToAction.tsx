@@ -9,13 +9,15 @@ const themeConfig = {
   dark: styles.buttonDark
 }
 
+const initialTheme = 'light'
+
 /**
  * The primary call to actions of the application
  * @see {@link CallToActionProps} for props definition
  * @param {CallToActionProps} CallToActionProps The component props
  * @returns The CallToAction component
  */
-const CallToAction = ({ large, theme = 'light' }: CallToActionProps) => {
+const CallToAction = ({ large, theme = initialTheme }: CallToActionProps) => {
   const buttonContainerStyle = `${styles.buttonContainer} ${large ? styles.large : ''}`
   const buttonStyle = `${styles.button} ${themeConfig[theme]}`
 

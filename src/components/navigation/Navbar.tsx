@@ -17,11 +17,13 @@ const themeConfig = {
   }
 }
 
+const initialTheme = 'light'
+
 /**
  * The main navbar of application
  * @returns Navbar component
  */
-const Navbar = ({ theme = 'light' }: Theme) => {
+const Navbar = ({ theme = initialTheme }: Theme) => {
   return (
     <header className={styles.navbar}>
       <div>
@@ -39,7 +41,9 @@ const Navbar = ({ theme = 'light' }: Theme) => {
         </Link>
       </div>
 
-      <Nav primary theme={theme} />
+      <div className='hidden md:block'>
+        <Nav primary theme={theme} />
+      </div>
     </header>
   )
 }

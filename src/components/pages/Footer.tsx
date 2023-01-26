@@ -5,6 +5,9 @@ import styles from '../../styles/pages/Footer.module.css'
 // Types
 import { Theme } from '../../types/theme'
 import CallToAction from '../input/CallToAction'
+import Link from 'next/link'
+
+const initialTheme = 'light'
 
 /**
  * The footer section of application
@@ -12,8 +15,8 @@ import CallToAction from '../input/CallToAction'
  * @param {Theme} Theme The Footer component porps
  * @returns Footer section component
  */
-const Footer = ({ theme = 'light' }: Theme) => {
-  const footerStyle = theme === 'dark' ? styles.footerDark : ''
+const Footer = ({ theme = initialTheme }: Theme) => {
+  const footerStyle = theme !== initialTheme ? styles.footerDark : ''
   return (
     <footer className={footerStyle}>
       <div id='about' className={styles.philosophy}>
@@ -27,8 +30,10 @@ const Footer = ({ theme = 'light' }: Theme) => {
         </div>
       </div>
       <div className={styles.foot}>
-        <div className='text-2xl underline'>
-          info@emah.mx
+        <div className={styles.footMail}>
+          <Link href='mailto:info@emah.mx' target='_blank' rel='noreferrer'>
+            info@emah.mx
+          </Link>
         </div>
         <Nav theme={theme} />
         <div className={styles.footAction}>

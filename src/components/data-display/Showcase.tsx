@@ -12,6 +12,8 @@ const imagesConfig = {
   development: styles.backgroundDevelopment
 }
 
+const initialTheme = 'light'
+
 /**
  * Using to show a image with a heading and descriptions
  * @see {@link ShowcaseProps} for props specifications
@@ -23,14 +25,14 @@ const Showcase = (
     heading,
     descriptions,
     image,
-    theme = 'light',
+    theme = initialTheme,
     action,
     large,
     reverse
   }: ShowcaseProps
 ) => {
   // Theme
-  const isThemeLight = theme === 'light'
+  const isThemeLight = theme === initialTheme
   const headingStyle = isThemeLight ? '' : styles.headingDark
   const descriptionsStyle = `${styles.descriptions} ${isThemeLight ? '' : styles.descriptionsDark}`
   // Reverse

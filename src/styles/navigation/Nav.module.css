@@ -2,7 +2,14 @@
   @apply
   /* Spacing */
   flex
+  items-center
   gap-x-4 md:gap-x-5
   /* Typography */
   text-sm md:text-base;
+}
+
+.navDark {
+  @apply
+  /* Typography */
+  text-emah-dark;
 }

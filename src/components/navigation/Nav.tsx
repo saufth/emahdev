@@ -26,17 +26,20 @@ const navConfig: LinkProps[] = [
   }
 ]
 
+const initialTheme = 'light'
+
 /**
 * The main navigation of the application
 * @see {@link Theme} for props definition
 * @param {Theme} Theme The component theme
 * @returns The Nav component
 */
-const Nav = ({ primary, theme }: NavProps) => {
+const Nav = ({ primary, theme = initialTheme }: NavProps) => {
   const navOptions = primary ? navConfig.slice(0, -1) : navConfig
+  const navStyle = `${styles.nav} ${theme !== initialTheme ? styles.navDark : ''}`
 
   return (
-    <nav aria-label='Directorio emah' className={styles.nav}>
+    <nav aria-label='Directorio emah' className={navStyle}>
       {navOptions.map((option, key) => {
         return (
           <Link href={option.href} key={key}>
@@ -44,7 +47,7 @@ const Nav = ({ primary, theme }: NavProps) => {
           </Link>
         )
       })}
-      {primary ? (<CallToAction large theme={theme} />) : null}
+      {primary ? (<CallToAction theme={theme} />) : null}
     </nav>
   )
 }
