@@ -1,11 +1,11 @@
-.buttonContainer {
+.action {
   @apply
     /* Sizing */
     w-32
     h-10
-    /* Layout */
-    relative
-    overflow-hidden
+    /* Flexbox & Grid */
+    grid
+    place-content-center
     /* Typography */
     font-proxima-soft-semibold
     text-sm
@@ -22,14 +22,7 @@
     text-base;
 }
 
-.button {
-  @apply
-    /* Sizing */
-    w-full
-    h-full;
-}
-
-.buttonLight {
+.actionLight {
   @apply
     /* Typography */
     text-emah-gray
@@ -37,7 +30,7 @@
     bg-white;
 }
 
-.buttonDark {
+.actionDark {
   @apply
     /* Typography */
     text-white

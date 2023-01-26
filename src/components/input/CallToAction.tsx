@@ -1,12 +1,13 @@
 // Styles
+import Link from 'next/link'
 import styles from '../../styles/input/CallToAction.module.css'
 // Types
 import { CallToActionProps } from '../../types/input'
 
 /** Theme configuration for CallToAction */
 const themeConfig = {
-  light: styles.buttonLight,
-  dark: styles.buttonDark
+  light: styles.actionLight,
+  dark: styles.actionDark
 }
 
 const initialTheme = 'light'
@@ -18,18 +19,14 @@ const initialTheme = 'light'
  * @returns The CallToAction component
  */
 const CallToAction = ({ large, theme = initialTheme }: CallToActionProps) => {
-  const buttonContainerStyle = `${styles.buttonContainer} ${large ? styles.large : ''}`
-  const buttonStyle = `${styles.button} ${themeConfig[theme]}`
-
-  /** The primary action of the application */
-  const handleAction = () => alert('Primary action dene!')
+  const actionStyle = `${styles.action} ${large ? styles.large : ''} ${themeConfig[theme]}`
 
   return (
-    <div className={buttonContainerStyle}>
-      <button className={buttonStyle} onClick={handleAction}>
+    <Link href='/contact'>
+      <div className={actionStyle}>
         Contáctanos
-      </button>
-    </div>
+      </div>
+    </Link>
   )
 }
 
