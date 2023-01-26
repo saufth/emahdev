@@ -1,7 +1,7 @@
 // Components
-import CallToAction from '../input/CallToAction'
 import Image from 'next/image'
 import Link from 'next/link'
+import Nav from './Nav'
 // Styles
 import styles from '../../styles/navigation/Navbar.module.css'
 // Types
@@ -39,7 +39,7 @@ const Navbar = ({ theme = 'light' }: Theme) => {
         </Link>
       </div>
 
-      <CallToAction theme={theme} />
+      <Nav primary theme={theme} />
     </header>
   )
 }

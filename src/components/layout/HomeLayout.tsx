@@ -49,7 +49,7 @@ const HomeLayout = ({ children }: ParentProps) => {
   useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
     if (latestScrollY <= sphereTop) {
       sphereY.set((-latestScrollY) + sphereTop)
-    } else if (latestScrollY >= (height * 0.77)) {
+    } else if (latestScrollY >= (height * 0.8)) {
       sphereY.set(sphereTop)
     } else {
       sphereY.set(0)
