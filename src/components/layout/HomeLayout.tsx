@@ -42,14 +42,15 @@ const HomeLayout = ({ children }: ParentProps) => {
   const springContainer = useSpring(transformContainer, physics)
   // Sphere
   const sphereTop = width >= 576 ? 700 : 576
+  const sphereMaxLimit = height * 0.8
   const sphereY = useMotionValue(sphereTop)
   const transformSphere = useTransform(sphereY, [0, (sphereTop * 1.9)], [0, sphereTop])
   const springSphere = useSpring(transformSphere, physics)
 
   useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
-    if (latestScrollY <= sphereTop) {
-      sphereY.set((-latestScrollY) + sphereTop)
-    } else if (latestScrollY >= (height * 0.8)) {
+    if (latestScrollY < sphereTop) {
+      sphereY.set(sphereTop - latestScrollY)
+    } else if (latestScrollY >= sphereMaxLimit) {
       sphereY.set(sphereTop)
     } else {
       sphereY.set(0)
