@@ -49,23 +49,9 @@
     gap-y-5;
 }
 
-.footNav {
+.footAction {
   @apply
     /* Spacing */
-    flex
-    flex-col
-    gap-y-6;
-}
-
-.footNavList {
-  @apply
-    /* Spacing */
-    space-x-4 md:space-x-5
-    text-sm md:text-base;
-}
-
-.footNavAction {
-  @apply
-    /* Spacing */
+    pt-2
     md:hidden;
 }

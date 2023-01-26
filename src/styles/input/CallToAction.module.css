@@ -16,7 +16,7 @@
 .large {
   @apply
     /* Sizing */
-    w-full
+    w-64
     h-12
     /* Typography */
     text-base;

@@ -55,6 +55,7 @@ const WhatWeDo = () => {
           />
         ))}
       </div>
+
     </section>
   )
 }

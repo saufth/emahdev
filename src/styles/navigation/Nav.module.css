@@ -1,0 +1,8 @@
+.nav {
+  @apply
+  /* Spacing */
+  flex
+  gap-x-4 md:gap-x-5
+  /* Typography */
+  text-sm md:text-base;
+}
