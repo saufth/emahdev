@@ -5,13 +5,6 @@ import styles from '../../styles/data-display/Showcase.module.css'
 // Types
 import { ShowcaseProps } from '../../types/data-display'
 
-/** Configuration for available images */
-const imagesConfig = {
-  branding: styles.backgroundBranding,
-  design: styles.backgroundDesign,
-  development: styles.backgroundDevelopment
-}
-
 const initialTheme = 'light'
 
 /**
@@ -32,15 +25,16 @@ const Showcase = (
   }: ShowcaseProps
 ) => {
   // Theme
-  const isThemeLight = theme === initialTheme
-  const headingStyle = isThemeLight ? '' : styles.headingDark
-  const descriptionsStyle = `${styles.descriptions} ${isThemeLight ? '' : styles.descriptionsDark}`
+  const themeStatus = theme !== initialTheme
+  const headingStyle = themeStatus ? styles.headingDark : ''
+  const descriptionsStyle = `${styles.descriptions} ${themeStatus ? styles.descriptionsDark : ''}`
   // Reverse
   const containerStyle = `${styles.container} ${reverse ? styles.containerReverse : ''}`
   const demoStyle = `${styles.demo} ${reverse ? styles.demoReverse : ''} ${large ? styles.demoLarge : ''}`
   const imageContainerStyle = `${styles.imageContainer} ${reverse ? styles.imageContainerReverse : ''}`
   // Image
-  const imageStyle = `${styles.image} ${imagesConfig[image]}`
+  const imageStyle = `${styles.image}`
+  const backgroundImageStyle = { backgroundImage: `url(/images/sections/${image}.jpg)` }
 
   return (
     <section className={containerStyle}>
@@ -65,7 +59,7 @@ const Showcase = (
 
       <div>
         <div className={imageContainerStyle}>
-          <div className={imageStyle} />
+          <div className={imageStyle} style={backgroundImageStyle} />
         </div>
       </div>
 

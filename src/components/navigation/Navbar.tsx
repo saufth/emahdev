@@ -41,8 +41,14 @@ const Navbar = ({ theme = initialTheme }: Theme) => {
         </Link>
       </div>
 
-      <div className='hidden md:block'>
-        <Nav primary theme={theme} />
+      <div className='flex items-center gap-x-4 md:gap-x-5'>
+        <div className='hidden md:block'>
+          <Nav primary theme={theme} />
+        </div>
+        <div className='w-7 flex flex-col gap-y-1.5 [&>span]:w-6 [&>span]:h-0.75 [&>span]:bg-white [&>span]:rounded-sm first:[&>span]:self-end'>
+          <span />
+          <span />
+        </div>
       </div>
     </header>
   )

@@ -32,29 +32,26 @@ const Sphere = dynamic(() => import('../animation/Sphere'), {
  * @returns The About page layout component
  */
 const HomeLayout = ({ children }: ParentProps) => {
-  // Scroll
+  // Scroll animation
   const { scrollY } = useScroll()
+  // Scroll animation config
   const physics = usePhysics()
-  // Document
+  // Document scroll animation
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width, height } = useDimensions(scrollRef)
   const transformContainer = useTransform(scrollY, [0, height], [0, -height])
   const springContainer = useSpring(transformContainer, physics)
-  // Sphere
-  const sphereTop = width >= 576 ? 700 : 576
+  // Sphere scroll animation
+  const sphereMinLimit = width >= 576 ? 700 : 576
   const sphereMaxLimit = height * 0.8
-  const sphereY = useMotionValue(sphereTop)
-  const transformSphere = useTransform(sphereY, [0, (sphereTop * 1.9)], [0, sphereTop])
+  const sphereY = useMotionValue(sphereMinLimit)
+  const transformSphere = useTransform(sphereY, [0, (sphereMinLimit * 1.9)], [0, sphereMinLimit])
   const springSphere = useSpring(transformSphere, physics)
-
+  // Sphere scroll animation event
   useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
-    if (latestScrollY < sphereTop) {
-      sphereY.set(sphereTop - latestScrollY)
-    } else if (latestScrollY >= sphereMaxLimit) {
-      sphereY.set(sphereTop)
-    } else {
-      sphereY.set(0)
-    }
+    latestScrollY < sphereMinLimit
+      ? sphereY.set(sphereMinLimit - latestScrollY)
+      : latestScrollY < sphereMaxLimit ? sphereY.set(0) : sphereY.set(sphereMinLimit)
   })
 
   return (

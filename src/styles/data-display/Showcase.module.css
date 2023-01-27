@@ -97,24 +97,5 @@
     rounded-[11%]
     /* Background */
     bg-center
-    bg-cover
-    bg-hero;
-}
-
-.backgroundBranding {
-  @apply
-    /* Background */
-    bg-branding;
-}
-
-.backgroundDesign {
-  @apply
-    /* Background */
-    bg-design;
-}
-
-.backgroundDevelopment {
-  @apply
-    /* Background */
-    bg-development;
+    bg-cover;
 }

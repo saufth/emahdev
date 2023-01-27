@@ -97,11 +97,17 @@ module.exports = {
         'center-4xl': '0px 0px 96px rgba(0, 0, 0, 1)'
       },
       backgroundImage: {
-        hero: "url('/images/sections/hero/hero.png')",
-        branding: "url('/images/sections/whatwedo/branding.jpg')",
-        design: "url('/images/sections/whatwedo/design.jpg')",
-        development: "url('/images/sections/whatwedo/development.jpg')",
-        about: "url('/images/sections/about/hero.jpg')"
+        'about-hero': "url('/images/sections/about.jpg')"
+        // 'service-branding': "url('/images/sections/whatwedo/branding.jpg')",
+        // 'service-design': "url('/images/sections/whatwedo/design.jpg')",
+        // 'service-development': "url('/images/sections/whatwedo/development.jpg')",
+        // 'about-team': "url('/images/sections/about/team.jpg')",
+        // 'about-innovate': "url('/images/sections/about/innovate.jpg')",
+        // 'about-oportunity': "url('/images/sections/about/oportunity.jpg')",
+        // 'about-assume': "url('/images/sections/about/assume.jpg')",
+        // 'about-strategy': "url('/images/sections/about/strategy.jpg')",
+        // 'about-prevent': "url('/images/sections/about/prevent.jpg')",
+        // 'about-progress': "url('/images/sections/about/progress.jpg')"
       },
       transitionDelay: {
         600: '600ms'
