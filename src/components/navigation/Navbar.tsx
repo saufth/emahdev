@@ -125,8 +125,13 @@ const Navbar = ({ theme = 'light' }: Theme) => {
             </Link>
           </div>
 
-          <div className={styles.sidebarClose} onClick={() => toggleOpen()}>
-            Cerrar
+          <div className={styles.options}>
+            <div className={styles.sidebarNavContact}>
+              <CallToAction theme='dark' />
+            </div>
+            <div className={styles.sidebarClose} onClick={() => toggleOpen()}>
+              Cerrar
+            </div>
           </div>
         </motion.header>
 

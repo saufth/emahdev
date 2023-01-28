@@ -61,7 +61,7 @@
     /* Flexbox & Grid */
     grid
     place-content-center
-    gap-y-4 md:gap-y-6
+    gap-y-12 md:gap-y-9
     /* Typography */
     text-sm md:text-base
     text-center
@@ -72,7 +72,7 @@
   @apply
     /* Typography */
     font-proxima-soft-bold
-    text-3xl md:text-4xl
+    text-5xl md:text-4xl
     text-emah-dark;
 }
 
