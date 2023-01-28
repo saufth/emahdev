@@ -76,6 +76,14 @@
     text-emah-dark;
 }
 
+.sidebarClose {
+  @apply
+  md:text-lg
+  text-emah-dark
+  /* Interactiviry */
+  cursor-pointer;
+}
+
 .sidebarBackground {
   @apply
     /* Sizing */
