@@ -73,7 +73,7 @@ const Navbar = ({ theme = 'light' }: Theme) => {
   const { scrollY } = useScroll()
 
   useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
-    setIsScrollOnTop(latestScrollY < 1)
+    setIsScrollOnTop(latestScrollY < 32)
   })
 
   return (

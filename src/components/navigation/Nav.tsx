@@ -16,10 +16,10 @@ const navConfig: LinkProps[] = [
     children: 'Nosotros',
     href: '/about'
   },
-  {
-    children: 'Servicios',
-    href: '/services'
-  },
+  // {
+  //   children: 'Servicios',
+  //   href: '/services'
+  // },
   {
     children: 'Contacto',
     href: '/contact'
