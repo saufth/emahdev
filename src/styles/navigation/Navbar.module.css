@@ -76,6 +76,20 @@
     text-emah-dark;
 }
 
+.sidebarNavContact {
+  @apply
+    /* Layout */
+    hidden md:block;
+}
+
+.sidebarNavAction {
+  @apply
+    /* Spacing */
+    mt-2
+    /* Layout */
+    md:hidden;
+}
+
 .sidebarClose {
   @apply
   md:text-lg

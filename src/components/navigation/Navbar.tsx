@@ -151,9 +151,12 @@ const Navbar = ({ theme = 'light' }: Theme) => {
             </Link>
           </li>
           <li className={styles.sidebarItem}>
-            <Link href='/contact'>
+            <Link href='/contact' className={styles.sidebarNavContact}>
               Contacto
             </Link>
+            <div className={styles.sidebarNavAction}>
+              <CallToAction large theme='dark' />
+            </div>
           </li>
         </motion.ul>
 
