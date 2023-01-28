@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@emailjs/browser': ^3.10.0
   '@react-three/drei': 9.47.1
   '@react-three/fiber': 8.9.1
   '@react-three/postprocessing': 2.7.0
@@ -25,6 +26,7 @@ specifiers:
   typescript: 4.9.4
 
 dependencies:
+  '@emailjs/browser': 3.10.0
   '@react-three/drei': 9.47.1_xa6xk36nauwxkzngvitxgjpnr4
   '@react-three/fiber': 8.9.1_pvdsq7s4d5knbxbfttptgjiz3a
   '@react-three/postprocessing': 2.7.0_7l5c7g5ph6e5ybhvldx3hsiylq
@@ -87,6 +89,11 @@ packages:
 
   /@chevrotain/utils/10.4.2:
     resolution: {integrity: sha512-V34dacxWLwKcvcy32dx96ADJVdB7kOJLm7LyBkBQw5u5HC9WdEFw2G17zml+U3ivavGTrGPJHl8o9/UJm0PlUw==}
+    dev: false
+
+  /@emailjs/browser/3.10.0:
+    resolution: {integrity: sha512-pregUOBkSjjctQoAgn8DcSaeY4ypHjXAJEzWlJysM3RkQXw1ulavfHva3YYeAkxfJ7qbIhpyvRmhyQlgNG4GVg==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /@emotion/is-prop-valid/0.8.8:
