@@ -14,12 +14,12 @@ import styles from '../../styles/layout/AboutLayout.module.css'
 import { ParentProps } from '../../types/layout'
 
 /**
- * A scrolleable container with ease effect for About page
+ * A scrolleable container with ease effect
  * @see {@link ParentProps} for props definitions
  * @param {ParentProps} ParentProps The child elements
- * @returns The AboutLayout component
+ * @returns The Home page layout component
  */
-const AboutLayout = ({ children }: ParentProps) => {
+const SmoothLayout = ({ children }: ParentProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const { height: documentHeight } = useDimensions(scrollRef)
@@ -29,9 +29,6 @@ const AboutLayout = ({ children }: ParentProps) => {
 
   const transformContainer = useTransform(scrollY, [0, documentHeight], [0, -documentHeight])
   const springContainer = useSpring(transformContainer, physics)
-
-  const transformImage = useTransform(scrollY, [0, (documentHeight * 1.4)], [0, -documentHeight])
-  const springImage = useSpring(transformImage, physics)
 
   return (
     <>
@@ -44,19 +41,9 @@ const AboutLayout = ({ children }: ParentProps) => {
         {children}
       </motion.div>
 
-      <motion.div className={styles.imageContainer} style={{ y: springImage }}>
-        {/* <Image
-          src='/images/sections/about/hero.jpg'
-          alt='About emah'
-          width={1920}
-          height={1080}
-          className={styles.image}
-        /> */}
-      </motion.div>
-
       <div style={{ height: documentHeight }} />
     </>
   )
 }
 
-export default AboutLayout
+export default SmoothLayout

@@ -1,3 +1,9 @@
+.section {
+  @apply
+    /* Spacing */
+    mt-24 md:mt-0;
+}
+
 .footerDark {
   @apply
     /* Typography */

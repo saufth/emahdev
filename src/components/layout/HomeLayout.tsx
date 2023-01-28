@@ -29,7 +29,7 @@ import Navbar from '../navigation/Navbar'
  * Create a scrolleable container with ease effect for Home page
  * @see {@link ParentProps} for props definitions
  * @param {ParentProps} ParentProps The content of the scrollable container
- * @returns The About page layout component
+ * @returns The HomeLayout component
  */
 const HomeLayout = ({ children }: ParentProps) => {
   // Scroll animation

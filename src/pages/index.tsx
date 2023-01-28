@@ -2,7 +2,7 @@
 import Footer from '../components/pages/Footer'
 import Hero from '../components/pages/Hero'
 import HomeLayout from '../components/layout/HomeLayout'
-import WhatWeDo from '../components/pages/Home/WhatWeDo'
+import WhatWeDo from '../components/pages/WhatWeDo'
 
 /**
  * The main page of the application

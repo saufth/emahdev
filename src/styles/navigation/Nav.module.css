@@ -1,9 +1,7 @@
 .nav {
   @apply
-  /* Layout */
-  hidden
   /* Flexbox & Grid */
-  md:flex
+  flex
   items-center
   gap-x-5 md:gap-x-8
   /* Typography */

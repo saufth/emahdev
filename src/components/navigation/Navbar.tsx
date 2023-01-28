@@ -101,7 +101,7 @@ const Navbar = ({ theme = 'light' }: Theme) => {
           <Menu action={() => toggleOpen()} theme={theme} />
         </div>
       </header>
-      <motion.nav
+      <motion.div
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
         custom={width}
@@ -172,7 +172,7 @@ const Navbar = ({ theme = 'light' }: Theme) => {
           className={styles.sidebarBackground}
           variants={sidebarVariants}
         />
-      </motion.nav>
+      </motion.div>
     </>
   )
 }

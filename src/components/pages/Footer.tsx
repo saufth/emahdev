@@ -16,7 +16,7 @@ const initialTheme = 'light'
  * @returns Footer section component
  */
 const Footer = ({ theme = initialTheme }: Theme) => {
-  const footerStyle = theme !== initialTheme ? styles.footerDark : ''
+  const footerStyle = `${styles.section} ${theme !== initialTheme ? styles.footerDark : ''}`
   return (
     <footer className={footerStyle}>
       <div id='about' className={styles.philosophy}>

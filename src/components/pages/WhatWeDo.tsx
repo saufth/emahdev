@@ -1,10 +1,10 @@
 // Components
-import Link from '../../navigation/Link'
-import Showcase from '../../data-display/Showcase'
-// Types
-import { ShowcaseProps } from '../../../types/data-display'
+import Link from '../navigation/Link'
+import Showcase from '../data-display/Showcase'
 // Styles
-import styles from '../../../styles/pages/WhatWeDo.module.css'
+import styles from '../../styles/pages/WhatWeDo.module.css'
+// Types
+import { ShowcaseProps } from '../../types/data-display'
 
 /** Organization services configuration */
 const servicesConfig: ShowcaseProps[] = [
