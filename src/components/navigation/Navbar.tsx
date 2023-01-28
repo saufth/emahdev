@@ -135,37 +135,43 @@ const Navbar = ({ theme = 'light' }: Theme) => {
           </div>
         </motion.header>
 
-        <motion.ul
+        <motion.nav
+          aria-label='Directorio emah'
           className={styles.sidebarContent}
           variants={sidebarContentVariants}
         >
-          <li>Menu</li>
-          <li className={styles.sidebarItem}>
+          <div>
+            Menu
+          </div>
+          <div className={styles.sidebarItem}>
             <Link href='/'>
               Inicio
             </Link>
-          </li>
-          <li className={styles.sidebarItem}>
+          </div>
+          {/* <div className={styles.sidebarItem}>
             <Link href='/services'>
               Servicios
             </Link>
-          </li>
-          <li className={styles.sidebarItem}>
+          </div> */}
+          <div className={styles.sidebarItem}>
             <Link href='/about'>
               Nosotros
             </Link>
-          </li>
-          <li className={styles.sidebarItem}>
+          </div>
+          <div className={styles.sidebarItem}>
             <Link href='/contact' className={styles.sidebarNavContact}>
               Contacto
             </Link>
             <div className={styles.sidebarNavAction}>
               <CallToAction large theme='dark' />
             </div>
-          </li>
-        </motion.ul>
+          </div>
+        </motion.nav>
 
-        <motion.div className={styles.sidebarBackground} variants={sidebarVariants} />
+        <motion.div
+          className={styles.sidebarBackground}
+          variants={sidebarVariants}
+        />
       </motion.nav>
     </>
   )
