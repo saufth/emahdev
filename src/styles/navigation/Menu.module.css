@@ -1,0 +1,22 @@
+.menu {
+  @apply
+    /* Spacing */
+    w-7
+    [&>span]:w-6
+    [&>span]:h-0.75
+    /* Flexbox & Grid */
+    flex
+    flex-col
+    gap-y-1.5
+    first:[&>span]:self-end
+    /* Background */
+    [&>span]:bg-white
+    /* Border */
+    [&>span]:rounded-sm;
+}
+
+.menuDark {
+  @apply
+    /* Background */
+    [&>span]:bg-emah-dark;
+}

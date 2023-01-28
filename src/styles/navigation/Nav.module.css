@@ -3,9 +3,10 @@
   /* Spacing */
   flex
   items-center
-  gap-x-4 md:gap-x-5
+  gap-x-5 md:gap-x-8
   /* Typography */
-  text-sm md:text-base;
+  text-sm md:text-md
+  leading-none;
 }
 
 .navDark {

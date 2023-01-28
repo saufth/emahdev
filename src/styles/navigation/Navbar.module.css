@@ -2,9 +2,9 @@
   @apply
     /* Sizing */
     w-full
+    h-[54px] md:h-[57px]
     /* Spacing */
-    px-[5%]
-    py-3
+    px-5%
     /* Layout */
     fixed
     top-0
@@ -15,14 +15,76 @@
     items-center;
 }
 
+.options {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    items-center
+    gap-x-4
+    md:gap-x-8;
+}
+
+.nav {
+  @apply
+    /* Layout */
+    hidden md:block;
+}
+
 .logo {
   @apply
     /* Sizing */
-    w-10 md:w-11;  
+    w-10 md:w-11;
 }
 
 .logomark {
   @apply
     /* Sizing */
     w-full;
+}
+
+.sidebarNavbar {
+  @apply
+    /* Layout */
+    z-70;
+}
+
+.sidebarContent {
+  @apply
+    /* Sizing */
+    w-full
+    h-screen
+    /* Layout */
+    fixed
+    top-0
+    left-0
+    z-60
+    /* Flexbox & Grid */
+    grid
+    place-content-center
+    gap-y-4 md:gap-y-6
+    /* Typography */
+    text-sm md:text-base
+    text-center
+    text-emah-gray;
+}
+
+.sidebarItem {
+  @apply
+    /* Typography */
+    font-proxima-soft-bold
+    text-3xl md:text-4xl
+    text-emah-dark;
+}
+
+.sidebarBackground {
+  @apply
+    /* Sizing */
+    w-full
+    h-screen
+    /* Layout */
+    fixed
+    top-0
+    z-50
+    /* Background */
+    bg-white;
 }

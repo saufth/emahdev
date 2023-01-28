@@ -17,3 +17,9 @@ export interface NavProps extends Theme {
    */
   primary?: boolean
 }
+
+/** The Menu component props */
+export interface MenuProps extends Theme {
+  /** The action of the menu button */
+  action?: () => void
+}

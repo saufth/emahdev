@@ -83,13 +83,25 @@ module.exports = {
         ...sizingConfig.defaults
       },
       padding: {
+        '5%': '5%',
         ...sizingConfig.defaults
       },
       margin: {
         ...sizingConfig.defaults
       },
+      zIndex: {
+        60: 60,
+        70: 70
+      },
+      fontSize: {
+        md: ['0.938rem', { lineHeight: '1.375rem' }],
+        '4.5xl': ['2.5rem', { lineHeight: '1rem' }]
+      },
       borderRadius: {
-        14: '14px'
+        '11%': '11%',
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+        '6xl': '3rem'
       },
       boxShadow: {
         'center-2xl': '0px 0px 32px rgba(0, 0, 0, 1)',

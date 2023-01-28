@@ -3,7 +3,7 @@
     /* Sizing */
     w-full
     /* Spacing */
-    px-[5%]
+    px-5%
     /* Layout */
     fixed
     top-0
@@ -32,7 +32,7 @@
     bg-cover
     bg-center
     /* Border */
-    rounded-[3rem]
+    rounded-6xl
     /* Interactivity */
     will-change-transform;
 }

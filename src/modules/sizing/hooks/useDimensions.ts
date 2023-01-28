@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect, useRef, RefObject } from 'react'
+import { useEffect, useRef, RefObject } from 'react'
 // Types
 import { Dimensionable } from '../../../types/sizing'
 
@@ -8,34 +8,16 @@ import { Dimensionable } from '../../../types/sizing'
  * @param ref A div element ref to get dimensions
  * @returns A object with the dimensions of the viewport or a div element reference
  */
-const useDimensions = (ref?: RefObject<HTMLDivElement>) => {
-  const [dimensions, setDimensions] = useState<Dimensionable>({
-    width: 0,
-    height: 0
-  })
-
-  const isMounted = useRef(false)
+const useDimensions = <ElementType extends HTMLElement>(ref?: RefObject<ElementType>) => {
+  const dimensions = useRef<Dimensionable>({ width: 0, height: 0 })
 
   useEffect(() => {
-    const handleWindowResize = () => {
-      const node = ref?.current
-      const newDimensions: Dimensionable = node
-        ? node.getBoundingClientRect()
-        : { width: window.innerWidth, height: window.innerHeight }
-      setDimensions(newDimensions)
-    }
-
-    if (!isMounted.current) {
-      handleWindowResize()
-      isMounted.current = true
-    }
-
-    window.addEventListener('resize', handleWindowResize)
-
-    return () => window.removeEventListener('resize', handleWindowResize)
+    dimensions.current = ref?.current
+      ? { width: ref.current.offsetWidth, height: ref.current.offsetHeight }
+      : { width: window.innerWidth, height: window.innerHeight }
   }, [ref])
 
-  return dimensions
+  return dimensions.current
 }
 
 export default useDimensions

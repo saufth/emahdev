@@ -62,7 +62,7 @@
     space-y-2 sm:space-y-4
     /* Typography */
     font-proxima-soft-medium md:font-proxima-soft-semibold
-    text-[15px] lg:text-lg
+    text-md lg:text-lg
     leading-none;
 }
 
@@ -94,7 +94,7 @@
     w-full
     h-full
     /* Border */
-    rounded-[11%]
+    rounded-11%
     /* Background */
     bg-center
     bg-cover;

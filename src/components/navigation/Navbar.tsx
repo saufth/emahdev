@@ -1,7 +1,15 @@
 // Components
+import CallToAction from '../input/CallToAction'
 import Image from 'next/image'
 import Link from 'next/link'
+import Menu from './Menu'
 import Nav from './Nav'
+// React
+import { useState } from 'react'
+// Hooks
+import useDimensions from '../../modules/sizing/hooks/useDimensions'
+// Animation
+import { motion, useCycle, useMotionValueEvent, useScroll } from 'framer-motion'
 // Styles
 import styles from '../../styles/navigation/Navbar.module.css'
 // Types
@@ -17,40 +25,139 @@ const themeConfig = {
   }
 }
 
-const initialTheme = 'light'
+/** Sidebar animation variants */
+const sidebarVariants = {
+  open: (width = 1366) => ({
+    clipPath: `circle(${width * 2}px at 100% 0px)`,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 20,
+      restDelta: 2
+    }
+  }),
+  closed: {
+    clipPath: 'circle(0px at 100% 0px)',
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      type: 'spring',
+      stiffness: 400,
+      damping: 40
+    }
+  }
+}
+
+/** Sidebar content animation variants */
+const sidebarContentVariants = {
+  open: {
+    opacity: 1,
+    transition: {
+      delay: 0.3
+    }
+  },
+  closed: {
+    opacity: 0
+  }
+}
 
 /**
  * The main navbar of application
  * @returns Navbar component
  */
-const Navbar = ({ theme = initialTheme }: Theme) => {
-  return (
-    <header className={styles.navbar}>
-      <div>
-        <Link href='/'>
-          <div className={styles.logo}>
-            <Image
-              alt='emah logomark'
-              src={themeConfig[theme].logo}
-              width={64}
-              height={48}
-              priority
-              className={styles.logomark}
-            />
-          </div>
-        </Link>
-      </div>
+const Navbar = ({ theme = 'light' }: Theme) => {
+  const [isScrollOnTop, setIsScrollOnTop] = useState(true)
+  // Animation
+  const { width } = useDimensions()
+  const [isOpen, toggleOpen] = useCycle(false, true)
+  const { scrollY } = useScroll()
 
-      <div className='flex items-center gap-x-4 md:gap-x-5'>
-        <div className='hidden md:block'>
-          <Nav primary theme={theme} />
+  useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
+    setIsScrollOnTop(latestScrollY < 1)
+  })
+
+  return (
+    <>
+      <header className={styles.navbar}>
+        <div>
+          <Link href='/'>
+            <div className={styles.logo}>
+              <Image
+                alt='emah logomark'
+                src={themeConfig[theme].logo}
+                width={64}
+                height={48}
+                priority
+                className={styles.logomark}
+              />
+            </div>
+          </Link>
         </div>
-        <div className='w-7 flex flex-col gap-y-1.5 [&>span]:w-6 [&>span]:h-0.75 [&>span]:bg-white [&>span]:rounded-sm first:[&>span]:self-end'>
-          <span />
-          <span />
+
+        <div className={styles.options}>
+          <div className={styles.nav}>
+            {isScrollOnTop ? <Nav primary theme={theme} /> : <CallToAction theme={theme} />}
+          </div>
+          <Menu action={() => toggleOpen()} theme={theme} />
         </div>
-      </div>
-    </header>
+      </header>
+      <motion.nav
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+        custom={width}
+      >
+        <motion.header
+          className={`${styles.navbar} ${styles.sidebarNavbar}`}
+          variants={sidebarContentVariants}
+        >
+          <div>
+            <Link href='/'>
+              <div className={styles.logo}>
+                <Image
+                  alt='emah logomark'
+                  src={themeConfig.dark.logo}
+                  width={64}
+                  height={48}
+                  priority
+                  className={styles.logomark}
+                />
+              </div>
+            </Link>
+          </div>
+
+          <Menu action={() => toggleOpen()} theme='dark' />
+        </motion.header>
+
+        <motion.ul
+          className={styles.sidebarContent}
+          variants={sidebarContentVariants}
+        >
+          <li>Menu</li>
+          <li className={styles.sidebarItem}>
+            <Link href='/'>
+              Inicio
+            </Link>
+          </li>
+          <li className={styles.sidebarItem}>
+            <Link href='/services'>
+              Servicios
+            </Link>
+          </li>
+          <li className={styles.sidebarItem}>
+            <Link href='/about'>
+              Nosotros
+            </Link>
+          </li>
+          <li className={styles.sidebarItem}>
+            <Link href='/contact'>
+              Contacto
+            </Link>
+          </li>
+        </motion.ul>
+
+        <motion.div className={styles.sidebarBackground} variants={sidebarVariants} />
+      </motion.nav>
+    </>
   )
 }
 
