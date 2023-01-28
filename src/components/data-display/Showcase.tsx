@@ -5,8 +5,6 @@ import styles from '../../styles/data-display/Showcase.module.css'
 // Types
 import { ShowcaseProps } from '../../types/data-display'
 
-const initialTheme = 'light'
-
 /**
  * Using to show a image with a heading and descriptions
  * @see {@link ShowcaseProps} for props specifications
@@ -18,14 +16,14 @@ const Showcase = (
     heading,
     descriptions,
     image,
-    theme = initialTheme,
+    theme = 'light',
     action,
     large,
     reverse
   }: ShowcaseProps
 ) => {
   // Theme
-  const themeStatus = theme !== initialTheme
+  const themeStatus = theme !== 'light'
   const headingStyle = themeStatus ? styles.headingDark : ''
   const descriptionsStyle = `${styles.descriptions} ${themeStatus ? styles.descriptionsDark : ''}`
   // Reverse

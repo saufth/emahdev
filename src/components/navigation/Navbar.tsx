@@ -49,7 +49,7 @@ const sidebarVariants = {
 }
 
 /** Sidebar content animation variants */
-const sidebarContentVariants = {
+const sidebarNavbarVariants = {
   open: {
     opacity: 1,
     transition: {
@@ -58,6 +58,21 @@ const sidebarContentVariants = {
   },
   closed: {
     opacity: 0
+  }
+}
+
+/** Sidebar content animation variants */
+const sidebarContentVariants = {
+  open: {
+    opacity: 1,
+    height: '100vh',
+    transition: {
+      delay: 0.3
+    }
+  },
+  closed: {
+    opacity: 0,
+    height: 0
   }
 }
 
@@ -108,7 +123,7 @@ const Navbar = ({ theme = 'light' }: Theme) => {
       >
         <motion.header
           className={`${styles.navbar} ${styles.sidebarNavbar}`}
-          variants={sidebarContentVariants}
+          variants={sidebarNavbarVariants}
         >
           <div>
             <Link href='/'>

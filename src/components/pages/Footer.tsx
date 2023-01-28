@@ -7,16 +7,14 @@ import { Theme } from '../../types/theme'
 import CallToAction from '../input/CallToAction'
 import Link from 'next/link'
 
-const initialTheme = 'light'
-
 /**
  * The footer section of application
  * @see {@link Theme} for props definition
  * @param {Theme} Theme The Footer component porps
  * @returns Footer section component
  */
-const Footer = ({ theme = initialTheme }: Theme) => {
-  const footerStyle = `${styles.section} ${theme !== initialTheme ? styles.footerDark : ''}`
+const Footer = ({ theme = 'light' }: Theme) => {
+  const footerStyle = `${styles.section} ${theme !== 'light' ? styles.footerDark : ''}`
   return (
     <footer className={footerStyle}>
       <div id='about' className={styles.philosophy}>

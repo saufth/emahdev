@@ -2,6 +2,7 @@
 import Footer from '../components/pages/Footer'
 import SmoothLayout from '../components/layout/SmoothLayout'
 import Contact from '../components/pages/Contact'
+import Hero from '../components/pages/Hero'
 
 /**
 * Contact page
@@ -10,7 +11,17 @@ import Contact from '../components/pages/Contact'
 const ContactPage = () => {
   return (
     <SmoothLayout>
-      <main>
+      <main className='mt-48'>
+        <Hero space theme='dark'>
+          <span className='text-left tracking-normal'>
+            <div className='text-base md:text-lg mb-2'>
+              ¿Tienes algun proyecto en mente?
+            </div>
+            <div>
+              Pongamonos en contacto
+            </div>
+          </span>
+        </Hero>
         <Contact />
       </main>
       <Footer theme='dark' />

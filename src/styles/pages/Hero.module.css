@@ -1,9 +1,15 @@
-.hero {
+.section {
   @apply
     /* Sizing */
     w-full
-    h-xl
+    h-auto
     top-0;
+}
+
+.sectionHeight {
+  @apply
+    /* Sizing */
+    h-xl;
 }
 
 .header {

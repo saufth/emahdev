@@ -14,18 +14,19 @@ const Hero = (
     children,
     theme = 'light',
     space,
-    size = 'lg'
+    text = 'lg',
+    height
   }: HeroProps
 ) => {
+  const sectionStyle = `${styles.section} ${height ? styles.sectionHeight : ''}`
   const themeStyle = theme === 'dark' ? styles.themeDark : ''
   const spaceStyle = space ? styles.space : ''
   const contentStyle = `${themeStyle} ${spaceStyle}`
-
-  const sizeStyle = size === 'lg' ? styles.textLarge : styles.textMedium
+  const sizeStyle = text === 'lg' ? styles.textLarge : styles.textMedium
   const headingStyle = `${styles.heading} ${sizeStyle}`
 
   return (
-    <section className={styles.hero}>
+    <section className={sectionStyle}>
       <header className={styles.header}>
         <h1 className={headingStyle}>
           <div className={contentStyle}>

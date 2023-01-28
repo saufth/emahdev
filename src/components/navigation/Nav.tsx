@@ -26,17 +26,15 @@ const navConfig: LinkProps[] = [
   }
 ]
 
-const initialTheme = 'light'
-
 /**
 * The main navigation of the application
 * @see {@link Theme} for props definition
 * @param {Theme} Theme The component theme
 * @returns The Nav component
 */
-const Nav = ({ primary, theme = initialTheme }: NavProps) => {
+const Nav = ({ primary, theme = 'light' }: NavProps) => {
   const navOptions = primary ? navConfig.slice(0, -1) : navConfig
-  const navStyle = `${styles.nav} ${theme !== initialTheme ? styles.navDark : ''}`
+  const navStyle = `${styles.nav} ${theme !== 'light' ? styles.navDark : ''}`
 
   return (
     <nav aria-label='Directorio emah' className={navStyle}>

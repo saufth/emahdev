@@ -13,7 +13,7 @@ const HomePage = () => {
     <>
       <HomeLayout>
         <main>
-          <Hero>
+          <Hero height>
             <span>Design.</span><br className='lg:hidden' />
             <span>Branding.</span><br className='lg:hidden' />
             <span>Development</span><span className='lg:hidden'>.</span>

@@ -14,7 +14,7 @@ const AboutPage = () => {
   return (
     <AboutLayout>
       <main>
-        <Hero theme='dark' size='md' space>
+        <Hero theme='dark' text='md' space height>
           <span className={styles.hero}>
             Impulsamos empresas con visión, a fin de crear un legado de progreso y verdad
           </span>
