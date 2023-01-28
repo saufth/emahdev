@@ -21,12 +21,12 @@ const Footer = ({ theme = initialTheme }: Theme) => {
     <footer className={footerStyle}>
       <div id='about' className={styles.philosophy}>
         <div className={styles.philosophyHeader}>
-          <h2 className={styles.philosophyHeading}>
-            Filosofía
-          </h2>
-          <p className={styles.philosophyDescription}>
-            Menos es más
-          </p>
+          <div className={styles.philosophyHeading}>
+            emah
+          </div>
+          <div className={styles.philosophyDescription}>
+            Endless Posibilities
+          </div>
         </div>
       </div>
       <div className={styles.foot}>
