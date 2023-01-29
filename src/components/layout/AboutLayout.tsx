@@ -20,7 +20,7 @@ import { ParentProps } from '../../types/layout'
  */
 const AboutLayout = ({ children }: ParentProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
-  const { height } = useDimensions()
+  const { height } = useDimensions(scrollRef)
   // Scroll animation config
   const { scrollY } = useScroll()
   const physics = usePhysics()

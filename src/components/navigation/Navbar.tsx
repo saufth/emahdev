@@ -111,7 +111,7 @@ const Navbar = ({ theme = 'light' }: Theme) => {
           <div className={styles.nav}>
             <Nav primary theme={theme} />
           </div>
-          <Menu theme={theme} />
+          <Menu theme={theme} action={() => toggleOpen()} />
         </div>
       </header>
       <motion.div
