@@ -1,7 +1,7 @@
 // Components
 import Footer from '../components/pages/Footer'
 import SmoothLayout from '../components/layout/SmoothLayout'
-import Contact from '../components/pages/Contact'
+import ContactSection from '../components/pages/Contact'
 import Hero from '../components/pages/Hero'
 
 /**
@@ -22,7 +22,7 @@ const ContactPage = () => {
             </div>
           </span>
         </Hero>
-        <Contact />
+        <ContactSection />
       </main>
       <Footer theme='dark' />
     </SmoothLayout>

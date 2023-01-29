@@ -5,8 +5,8 @@ import { MenuProps } from '../../types/navigation'
 
 /**
 * The main menu of the application
-* @see {@link Theme} for props definition
-* @param {Theme} Theme The component theme
+* @see {@link MenuProps} for props definition
+* @param {MenuProps} MenuProps The Menu component props
 * @returns The Menu component
 */
 const Menu = ({ action, theme = 'light' }: MenuProps) => {

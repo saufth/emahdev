@@ -1,5 +1,3 @@
-// React
-import { useRef } from 'react'
 // Hooks
 import usePhysics from '../../modules/animation/hooks/usePhysics'
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
@@ -19,6 +17,7 @@ import styles from '../../styles/layout/HomeLayout.module.css'
 // Types
 import { ParentProps } from '../../types/layout'
 import Navbar from '../navigation/Navbar'
+import { useRef } from 'react'
 
 /** Sphere component */
 const Sphere = dynamic(() => import('../animation/Sphere'), {
@@ -30,15 +29,13 @@ const Sphere = dynamic(() => import('../animation/Sphere'), {
  * @see {@link ParentProps} for props definitions
  * @param {ParentProps} ParentProps The content of the scrollable container
  * @returns The HomeLayout component
- */
+*/
 const HomeLayout = ({ children }: ParentProps) => {
-  // Scroll animation
-  const { scrollY } = useScroll()
-  // Scroll animation config
-  const physics = usePhysics()
-  // Document scroll animation
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width, height } = useDimensions(scrollRef)
+  // Scroll animation config
+  const { scrollY } = useScroll()
+  const physics = usePhysics()
   const transformContainer = useTransform(scrollY, [0, height], [0, -height])
   const springContainer = useSpring(transformContainer, physics)
   // Sphere scroll animation

@@ -1,19 +1,18 @@
 // Components
-import CallToAction from '../input/CallToAction'
+// import CallToAction from '../input/CallToAction'
 import Image from 'next/image'
 import Link from 'next/link'
 import Menu from './Menu'
 import Nav from './Nav'
-// React
-import { useState } from 'react'
 // Hooks
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
 // Animation
-import { motion, useCycle, useMotionValueEvent, useScroll } from 'framer-motion'
+import { motion, useCycle } from 'framer-motion'
 // Styles
 import styles from '../../styles/navigation/Navbar.module.css'
 // Types
 import { Theme } from '../../types/theme'
+import CallToAction from '../input/CallToAction'
 
 /** Theme configuration for Navbar */
 const themeConfig = {
@@ -52,12 +51,17 @@ const sidebarVariants = {
 const sidebarNavbarVariants = {
   open: {
     opacity: 1,
+    zIndex: 70,
     transition: {
       delay: 0.3
     }
   },
   closed: {
-    opacity: 0
+    zIndex: 0,
+    opacity: 0,
+    transition: {
+      delay: 0.3
+    }
   }
 }
 
@@ -81,15 +85,9 @@ const sidebarContentVariants = {
  * @returns Navbar component
  */
 const Navbar = ({ theme = 'light' }: Theme) => {
-  const [isScrollOnTop, setIsScrollOnTop] = useState(true)
   // Animation
   const { width } = useDimensions()
   const [isOpen, toggleOpen] = useCycle(false, true)
-  const { scrollY } = useScroll()
-
-  useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
-    setIsScrollOnTop(latestScrollY < 32)
-  })
 
   return (
     <>
@@ -111,9 +109,9 @@ const Navbar = ({ theme = 'light' }: Theme) => {
 
         <div className={styles.options}>
           <div className={styles.nav}>
-            {isScrollOnTop ? <Nav primary theme={theme} /> : <CallToAction theme={theme} />}
+            <Nav primary theme={theme} />
           </div>
-          <Menu action={() => toggleOpen()} theme={theme} />
+          <Menu theme={theme} />
         </div>
       </header>
       <motion.div
@@ -163,11 +161,6 @@ const Navbar = ({ theme = 'light' }: Theme) => {
               Inicio
             </Link>
           </div>
-          {/* <div className={styles.sidebarItem}>
-            <Link href='/services'>
-              Servicios
-            </Link>
-          </div> */}
           <div className={styles.sidebarItem}>
             <Link href='/about'>
               Nosotros

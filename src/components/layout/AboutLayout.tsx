@@ -1,5 +1,4 @@
 // Components
-// import Image from 'next/image'
 import Navbar from '../navigation/Navbar'
 // React
 import { useRef } from 'react'
@@ -21,16 +20,14 @@ import { ParentProps } from '../../types/layout'
  */
 const AboutLayout = ({ children }: ParentProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
-
-  const { height: documentHeight } = useDimensions(scrollRef)
-
+  const { height } = useDimensions()
+  // Scroll animation config
   const { scrollY } = useScroll()
   const physics = usePhysics()
-
-  const transformContainer = useTransform(scrollY, [0, documentHeight], [0, -documentHeight])
+  const transformContainer = useTransform(scrollY, [0, height], [0, -height])
   const springContainer = useSpring(transformContainer, physics)
-
-  const transformImage = useTransform(scrollY, [0, (documentHeight * 1.4)], [0, -documentHeight])
+  // Sphere animation config
+  const transformImage = useTransform(scrollY, [0, (height * 1.4)], [0, -height])
   const springImage = useSpring(transformImage, physics)
 
   return (
@@ -44,17 +41,9 @@ const AboutLayout = ({ children }: ParentProps) => {
         {children}
       </motion.div>
 
-      <motion.div className={styles.imageContainer} style={{ y: springImage }}>
-        {/* <Image
-          src='/images/sections/about/hero.jpg'
-          alt='About emah'
-          width={1920}
-          height={1080}
-          className={styles.image}
-        /> */}
-      </motion.div>
+      <motion.div className={styles.imageContainer} style={{ y: springImage }} />
 
-      <div style={{ height: documentHeight }} />
+      <div style={{ height }} />
     </>
   )
 }

@@ -13,15 +13,12 @@ const sizeLimit = 768
  * Used to define de physics configuration when width change
  * @returns Physics configuration
  */
-const usePhysics = () => {
+const usePhysics = (): Physics => {
   const [physics, setPhysics] = useState<Physics>(physicsConfig)
-
   const { width } = useDimensions()
-
   useEffect(() => {
-    const currentPhysics = width >= sizeLimit ? physicsConfig : physicsMobileConfig
-    setPhysics(currentPhysics)
-  }, [physics, width])
+    setPhysics(width >= sizeLimit ? physicsConfig : physicsMobileConfig)
+  }, [width])
 
   return physics
 }

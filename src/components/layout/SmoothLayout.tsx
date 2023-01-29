@@ -1,8 +1,6 @@
 // Components
 // import Image from 'next/image'
 import Navbar from '../navigation/Navbar'
-// React
-import { useRef } from 'react'
 // Hooks
 import usePhysics from '../../modules/animation/hooks/usePhysics'
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
@@ -12,6 +10,7 @@ import { useScroll, useTransform, useSpring, motion } from 'framer-motion'
 import styles from '../../styles/layout/AboutLayout.module.css'
 // Types
 import { ParentProps } from '../../types/layout'
+import { useRef } from 'react'
 
 /**
  * A scrolleable container with ease effect
@@ -21,13 +20,11 @@ import { ParentProps } from '../../types/layout'
  */
 const SmoothLayout = ({ children }: ParentProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
-
-  const { height: documentHeight } = useDimensions(scrollRef)
-
+  const { height } = useDimensions(scrollRef)
+  // Scroll animation
   const { scrollY } = useScroll()
   const physics = usePhysics()
-
-  const transformContainer = useTransform(scrollY, [0, documentHeight], [0, -documentHeight])
+  const transformContainer = useTransform(scrollY, [0, height], [0, -height])
   const springContainer = useSpring(transformContainer, physics)
 
   return (
@@ -41,7 +38,7 @@ const SmoothLayout = ({ children }: ParentProps) => {
         {children}
       </motion.div>
 
-      <div style={{ height: documentHeight }} />
+      <div style={{ height }} />
     </>
   )
 }

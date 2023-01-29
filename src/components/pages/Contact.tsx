@@ -11,9 +11,12 @@ import styles from '../../styles/pages/Contact.module.css'
 */
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null)
+
   const sendEmail = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+
     const node = formRef.current
+
     if (node) {
       emailjs.sendForm(
         String(process.env.NEXT_PUBLIC_EMAIL_SERVICE_KEY),
@@ -30,7 +33,11 @@ const Contact = () => {
 
   return (
     <section className={styles.section}>
-      <form className={styles.form} onSubmit={sendEmail} ref={formRef}>
+      <form
+        className={styles.form}
+        onSubmit={sendEmail}
+        ref={formRef}
+      >
         <div>
           <input
             className={styles.input}
