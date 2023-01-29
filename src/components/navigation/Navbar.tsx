@@ -1,5 +1,5 @@
 // Components
-// import CallToAction from '../input/CallToAction'
+import CallToAction from '../input/CallToAction'
 import Image from 'next/image'
 import Link from 'next/link'
 import Menu from './Menu'
@@ -7,12 +7,12 @@ import Nav from './Nav'
 // Hooks
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
 // Animation
-import { motion, useCycle } from 'framer-motion'
+import { motion, useCycle, useMotionValueEvent, useScroll } from 'framer-motion'
 // Styles
 import styles from '../../styles/navigation/Navbar.module.css'
 // Types
 import { Theme } from '../../types/theme'
-import CallToAction from '../input/CallToAction'
+import { useState } from 'react'
 
 /** Theme configuration for Navbar */
 const themeConfig = {
@@ -88,6 +88,12 @@ const Navbar = ({ theme = 'light' }: Theme) => {
   // Animation
   const { width } = useDimensions()
   const [isOpen, toggleOpen] = useCycle(false, true)
+  const [isScrollOnTop, setIsScrollOnTop] = useState(true)
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
+    setIsScrollOnTop(latestScrollY < 24)
+  })
 
   return (
     <>
@@ -109,7 +115,7 @@ const Navbar = ({ theme = 'light' }: Theme) => {
 
         <div className={styles.options}>
           <div className={styles.nav}>
-            <Nav primary theme={theme} />
+            {isScrollOnTop ? <Nav primary theme={theme} /> : <CallToAction theme={theme} />}
           </div>
           <Menu theme={theme} action={() => toggleOpen()} />
         </div>
