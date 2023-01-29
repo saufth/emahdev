@@ -3,7 +3,7 @@ import Nav from '../navigation/Nav'
 // Styles
 import styles from '../../styles/pages/Footer.module.css'
 // Types
-import { Theme } from '../../types/theme'
+import { ThemeProps } from '../../types/theme'
 import CallToAction from '../input/CallToAction'
 import Link from 'next/link'
 
@@ -13,7 +13,7 @@ import Link from 'next/link'
  * @param {Theme} Theme The Footer component porps
  * @returns Footer section component
  */
-const Footer = ({ theme = 'light' }: Theme) => {
+const Footer = ({ theme = 'light' }: ThemeProps) => {
   const footerStyle = `${styles.section} ${theme !== 'light' ? styles.footerDark : ''}`
   return (
     <footer className={footerStyle}>

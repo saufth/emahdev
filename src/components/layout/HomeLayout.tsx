@@ -1,6 +1,10 @@
+// React
+import { useRef } from 'react'
 // Hooks
 import usePhysics from '../../modules/animation/hooks/usePhysics'
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
+// Utils
+import dynamic from 'next/dynamic'
 // Animation
 import {
   useScroll,
@@ -10,14 +14,10 @@ import {
   useMotionValueEvent,
   useMotionValue
 } from 'framer-motion'
-// Utils
-import dynamic from 'next/dynamic'
 // Styles
 import styles from '../../styles/layout/HomeLayout.module.css'
 // Types
 import { ParentProps } from '../../types/layout'
-import Navbar from '../navigation/Navbar'
-import { useRef } from 'react'
 
 /** Sphere component */
 const Sphere = dynamic(() => import('../animation/Sphere'), {
@@ -53,7 +53,6 @@ const HomeLayout = ({ children }: ParentProps) => {
 
   return (
     <>
-      <Navbar />
       <motion.div
         className={styles.scrollable}
         style={{ y: springContainer }}

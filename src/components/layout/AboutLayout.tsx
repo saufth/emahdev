@@ -1,5 +1,3 @@
-// Components
-import Navbar from '../navigation/Navbar'
 // React
 import { useRef } from 'react'
 // Hooks
@@ -32,7 +30,6 @@ const AboutLayout = ({ children }: ParentProps) => {
 
   return (
     <>
-      <Navbar theme='dark' />
       <motion.div
         className={styles.scrollable}
         style={{ y: springContainer }}

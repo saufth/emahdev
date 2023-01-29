@@ -1,6 +1,3 @@
-// Components
-// import Image from 'next/image'
-import Navbar from '../navigation/Navbar'
 // Hooks
 import usePhysics from '../../modules/animation/hooks/usePhysics'
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
@@ -29,7 +26,6 @@ const SmoothLayout = ({ children }: ParentProps) => {
 
   return (
     <>
-      <Navbar theme='dark' />
       <motion.div
         className={styles.scrollable}
         style={{ y: springContainer }}

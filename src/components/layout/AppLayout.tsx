@@ -1,6 +1,7 @@
 // Components
 import Head from 'next/head'
 import GSearchSchemaScript from '../app/scripts/GSearchSchemaScript'
+import Navbar from '../navigation/Navbar'
 // Types
 import { ParentProps } from '../../types/layout'
 
@@ -59,6 +60,7 @@ export default function AppLayout ({ children } : ParentProps) {
         <meta name='twitter:site' content={twitter} />
         <meta name='twitter:image' content={socialImageUrl} />
       </Head>
+      <Navbar />
       {children}
       <GSearchSchemaScript />
     </>

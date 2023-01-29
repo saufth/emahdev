@@ -1,5 +1,8 @@
+/** Application themes */
+export type Theme = 'light' | 'dark'
+
 /** Usign to define a theme */
-export interface Theme {
-  /** Themes */
-  theme?: 'light' | 'dark'
+export interface ThemeProps {
+  /** Current theme */
+  theme?: Theme
 }

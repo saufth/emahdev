@@ -1,9 +1,9 @@
 // Types
 import { ParentProps } from './layout'
-import { Theme } from './theme'
+import { ThemeProps } from './theme'
 
 /** The Hero component props */
-export interface HeroProps extends ParentProps, Theme {
+export interface HeroProps extends ParentProps, ThemeProps {
   /** Heading text sizes */
   text?: 'md' | 'lg'
   /** Define the space in X axis */

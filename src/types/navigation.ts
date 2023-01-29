@@ -1,5 +1,5 @@
 // Types
-import { Theme } from './theme'
+import { ThemeProps } from './theme'
 
 /** Link component props */
 export interface LinkProps {
@@ -10,7 +10,7 @@ export interface LinkProps {
 }
 
 /** Nav component props */
-export interface NavProps extends Theme {
+export interface NavProps extends ThemeProps {
   /**
    * Set the CallToAction component instead of the contact link,
    * is commonly used for the navbar
@@ -19,7 +19,7 @@ export interface NavProps extends Theme {
 }
 
 /** The Menu component props */
-export interface MenuProps extends Theme {
+export interface MenuProps extends ThemeProps {
   /** The action of the menu button */
   action?: () => void
 }

@@ -4,6 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Menu from './Menu'
 import Nav from './Nav'
+// React
+import { useState } from 'react'
+// NextJs router
+import { withRouter } from 'next/router'
+import { WithRouterProps } from 'next/dist/client/with-router'
 // Hooks
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
 // Animation
@@ -11,8 +16,7 @@ import { motion, useCycle, useMotionValueEvent, useScroll } from 'framer-motion'
 // Styles
 import styles from '../../styles/navigation/Navbar.module.css'
 // Types
-import { Theme } from '../../types/theme'
-import { useState } from 'react'
+// import { Theme } from '../../types/theme'
 
 /** Theme configuration for Navbar */
 const themeConfig = {
@@ -84,16 +88,19 @@ const sidebarContentVariants = {
  * The main navbar of application
  * @returns Navbar component
  */
-const Navbar = ({ theme = 'light' }: Theme) => {
+const Navbar = ({ router }: WithRouterProps) => {
+  const theme = router.pathname === '/' ? 'light' : 'dark'
   // Animation
   const { width } = useDimensions()
-  const [isOpen, toggleOpen] = useCycle(false, true)
+  const [isOpen, toggle] = useCycle(false, true)
   const [isScrollOnTop, setIsScrollOnTop] = useState(true)
   const { scrollY } = useScroll()
 
   useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
     setIsScrollOnTop(latestScrollY < 24)
   })
+
+  const handleToggle = () => toggle()
 
   return (
     <>
@@ -117,7 +124,7 @@ const Navbar = ({ theme = 'light' }: Theme) => {
           <div className={styles.nav}>
             {isScrollOnTop ? <Nav primary theme={theme} /> : <CallToAction theme={theme} />}
           </div>
-          <Menu theme={theme} action={() => toggleOpen()} />
+          <Menu theme={theme} action={handleToggle} />
         </div>
       </header>
       <motion.div
@@ -148,7 +155,7 @@ const Navbar = ({ theme = 'light' }: Theme) => {
             <div className={styles.sidebarNavContact}>
               <CallToAction theme='dark' />
             </div>
-            <div className={styles.sidebarClose} onClick={() => toggleOpen()}>
+            <div className={styles.sidebarClose} onClick={handleToggle}>
               Cerrar
             </div>
           </div>
@@ -162,21 +169,21 @@ const Navbar = ({ theme = 'light' }: Theme) => {
           <div>
             Menu
           </div>
-          <div className={styles.sidebarItem}>
+          <div className={styles.sidebarItem} onClick={handleToggle}>
             <Link href='/'>
               Inicio
             </Link>
           </div>
-          <div className={styles.sidebarItem}>
+          <div className={styles.sidebarItem} onClick={handleToggle}>
             <Link href='/about'>
               Nosotros
             </Link>
           </div>
-          <div className={styles.sidebarItem}>
+          <div className={styles.sidebarItem} onClick={handleToggle}>
             <Link href='/contact' className={styles.sidebarNavContact}>
               Contacto
             </Link>
-            <div className={styles.sidebarNavAction}>
+            <div className={styles.sidebarNavAction} onClick={handleToggle}>
               <CallToAction large theme='dark' />
             </div>
           </div>
@@ -191,4 +198,4 @@ const Navbar = ({ theme = 'light' }: Theme) => {
   )
 }
 
-export default Navbar
+export default withRouter(Navbar)
