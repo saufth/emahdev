@@ -89,7 +89,6 @@ const HomeLayout = ({ children }: ParentProps) => {
         style={{ y: containerSpring }}
         ref={scrollRef}
       >
-        {sphereConfigOnWidth.top}
         {children}
       </motion.div>
 
