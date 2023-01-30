@@ -22,23 +22,23 @@ const AboutLayout = ({ children }: ParentProps) => {
   // Scroll animation config
   const { scrollY } = useScroll()
   const physics = usePhysics()
-  const transformContainer = useTransform(scrollY, [0, height], [0, -height])
-  const springContainer = useSpring(transformContainer, physics)
+  const containerTransform = useTransform(scrollY, [0, height], [0, -height])
+  const containerSpring = useSpring(containerTransform, physics)
   // Sphere animation config
-  const transformImage = useTransform(scrollY, [0, (height * 1.4)], [0, -height])
-  const springImage = useSpring(transformImage, physics)
+  const imageTransform = useTransform(scrollY, [0, (height * 1.4)], [0, -height])
+  const imageSpring = useSpring(imageTransform, physics)
 
   return (
     <>
       <motion.div
         className={styles.scrollable}
-        style={{ y: springContainer }}
+        style={{ y: containerSpring }}
         ref={scrollRef}
       >
         {children}
       </motion.div>
 
-      <motion.div className={styles.imageContainer} style={{ y: springImage }} />
+      <motion.div className={styles.imageContainer} style={{ y: imageSpring }} />
 
       <div style={{ height }} />
     </>

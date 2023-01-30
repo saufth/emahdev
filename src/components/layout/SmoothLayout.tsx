@@ -22,14 +22,14 @@ const SmoothLayout = ({ children }: ParentProps) => {
   // Scroll animation
   const { scrollY } = useScroll()
   const physics = usePhysics()
-  const transformContainer = useTransform(scrollY, [0, height], [0, -height])
-  const springContainer = useSpring(transformContainer, physics)
+  const containerTransform = useTransform(scrollY, [0, height], [0, -height])
+  const containerSpring = useSpring(containerTransform, physics)
 
   return (
     <>
       <motion.div
         className={styles.scrollable}
-        style={{ y: springContainer }}
+        style={{ y: containerSpring }}
         ref={scrollRef}
       >
         {children}

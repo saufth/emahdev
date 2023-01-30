@@ -36,28 +36,47 @@ const HomeLayout = ({ children }: ParentProps) => {
   // Scroll animation config
   const { scrollY } = useScroll()
   const physics = usePhysics()
-  const transformContainer = useTransform(scrollY, [0, height], [0, -height])
-  const springContainer = useSpring(transformContainer, physics)
+  const containerTransform = useTransform(scrollY, [0, height], [0, -height])
+  const containerSpring = useSpring(containerTransform, physics)
   // Sphere scroll animation
-  const [sphereTop, setSphereTop] = useState(0)
+  const [
+    sphereConfigOnWidth,
+    setSphereConfigOnWidth
+  ] = useState({ top: 0, minLimit: 0 })
+  const [
+    sphereConfigOnHeight,
+    setSphereConfigOnHeight
+  ] = useState({ maxLimit: 0, maxRange: 0 })
   const sphereY = useMotionValue(0)
-  const transformSphere = useTransform(sphereY, [0, height * 1.9], [0, height])
-  const springSphere = useSpring(transformSphere, physics)
+  const sphereTransform = useTransform(sphereY, [0, sphereConfigOnHeight.maxRange], [0, height])
+  const sphereSpring = useSpring(sphereTransform, physics)
 
   // Observe for width changes to update animation config
   useEffect(() => {
-    setSphereTop(width > 576 ? 768 : 576)
+    const sphereTop = width > 576 ? 768 : 576
+    setSphereConfigOnWidth({
+      top: sphereTop,
+      minLimit: sphereTop * 1.33
+    })
     sphereY.set(sphereTop)
-  }, [width, sphereTop, sphereY])
+  }, [width, sphereY])
+
+  // Observe for height changes to update animation config
+  useEffect(() => {
+    setSphereConfigOnHeight({
+      maxLimit: height * 0.8,
+      maxRange: height * 1.9
+    })
+  }, [height])
 
   // Sphere scroll animation event
   useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
     if (latestScrollY < 1) {
-      sphereY.set(sphereTop)
-    } else if (latestScrollY < sphereTop * 2.76) {
+      sphereY.set(sphereConfigOnWidth.top)
+    } else if (latestScrollY < sphereConfigOnWidth.minLimit) {
       sphereY.set(0)
-    } else if (latestScrollY < height * 0.8) {
-      sphereY.set(sphereTop)
+    } else if (latestScrollY < sphereConfigOnHeight.maxLimit) {
+      sphereY.set(sphereConfigOnWidth.top)
     } else {
       sphereY.set(0)
     }
@@ -67,14 +86,14 @@ const HomeLayout = ({ children }: ParentProps) => {
     <>
       <motion.div
         className={styles.scrollable}
-        style={{ y: springContainer }}
+        style={{ y: containerSpring }}
         ref={scrollRef}
       >
-        {width + ' ' + height}
+        {sphereConfigOnWidth.top}
         {children}
       </motion.div>
 
-      <motion.div className={styles.sphere} style={{ y: springSphere }}>
+      <motion.div className={styles.sphere} style={{ y: sphereSpring }}>
         <Sphere />
       </motion.div>
 
