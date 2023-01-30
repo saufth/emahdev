@@ -18,7 +18,7 @@ import { ParentProps } from '../../types/layout'
  */
 const SmoothLayout = ({ children }: ParentProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
-  const { height } = useDimensions(scrollRef)
+  const { height } = useDimensions(scrollRef.current)
   // Scroll animation
   const { scrollY } = useScroll()
   const physics = usePhysics()

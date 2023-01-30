@@ -32,40 +32,31 @@ const Sphere = dynamic(() => import('../animation/Sphere'), {
 */
 const HomeLayout = ({ children }: ParentProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
-  const { width, height } = useDimensions(scrollRef)
+  const { width, height } = useDimensions(scrollRef.current)
   // Scroll animation config
   const { scrollY } = useScroll()
   const physics = usePhysics()
   const transformContainer = useTransform(scrollY, [0, height], [0, -height])
   const springContainer = useSpring(transformContainer, physics)
   // Sphere scroll animation
-  const [sphereTop, setSpheretop] = useState(0)
-  const [sphereMinLimit, setSphereMinLimit] = useState(0)
-  const [sphereMaxLimit, setSphereMaxLimit] = useState(0)
+  const [sphereTop, setSphereTop] = useState(0)
   const sphereY = useMotionValue(0)
   const transformSphere = useTransform(sphereY, [0, height * 1.9], [0, height])
   const springSphere = useSpring(transformSphere, physics)
-  // Update the sphere animation configuration
+
   // Observe for width changes to update animation config
   useEffect(() => {
-    const newInitialTop: number = width > 576 ? 768 : 576
-    setSpheretop(newInitialTop)
-    setSphereMinLimit(newInitialTop * 2)
+    setSphereTop(width > 576 ? 768 : 576)
     sphereY.set(sphereTop)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [width])
-  // Init animation config and observe height changes
-  useEffect(() => {
-    setSphereMaxLimit(height * 0.8)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [height])
+  }, [width, sphereTop, sphereY])
+
   // Sphere scroll animation event
   useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
     if (latestScrollY < 1) {
       sphereY.set(sphereTop)
-    } else if (latestScrollY < sphereMinLimit * 0.76) {
+    } else if (latestScrollY < sphereTop * 2.76) {
       sphereY.set(0)
-    } else if (latestScrollY < sphereMaxLimit) {
+    } else if (latestScrollY < height * 0.8) {
       sphereY.set(sphereTop)
     } else {
       sphereY.set(0)
@@ -79,6 +70,7 @@ const HomeLayout = ({ children }: ParentProps) => {
         style={{ y: springContainer }}
         ref={scrollRef}
       >
+        {width + ' ' + height}
         {children}
       </motion.div>
 
