@@ -32,7 +32,7 @@ const useRefMagnetic = (
   const magneticField = fieldRef || magnetRef
 
   const mousePosition = useRefMousePosition(magneticField, layout)
-  const dimensions = useDimensions(magneticField)
+  const dimensions = useDimensions(magneticField.current)
 
   useEffect(() => {
     const halfWidth = dimensions.width / 2
