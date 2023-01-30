@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react'
 // Hooks
 import useDimensions from '../../sizing/hooks/useDimensions'
-import useRefMousePosition from '../../input/hooks/useRefMousePosition'
+import useMousePosition from '../../input/hooks/useMousePosition'
 // Types
 import { MagneticProps, Transformable } from '../../../types/animation'
 
@@ -18,7 +18,7 @@ const strength = 1.18
  * @param {MagneticProps} MagneticProps Magnetic props
  * @returns A magnetic ref for a div
  */
-const useRefMagnetic = (
+const useMagnetic = (
   {
     fieldRef,
     rotation = 0,
@@ -31,7 +31,7 @@ const useRefMagnetic = (
 
   const magneticField = fieldRef || magnetRef
 
-  const mousePosition = useRefMousePosition(magneticField, layout)
+  const mousePosition = useMousePosition(magneticField, layout)
   const dimensions = useDimensions(magneticField.current)
 
   useEffect(() => {
@@ -94,4 +94,4 @@ const useRefMagnetic = (
   return magnetRef
 }
 
-export default useRefMagnetic
+export default useMagnetic

@@ -9,7 +9,7 @@ import { MousePositionLayout } from '../../../types/input'
  * @param from Used to define the method to get the mouse position
  * @returns A object with the coordinates of the cursos
  */
-const useRefMousePosition = (
+const useMousePosition = (
   ref: RefObject<HTMLDivElement>,
   from: MousePositionLayout = 'screen'
 ) => {
@@ -40,4 +40,4 @@ const useRefMousePosition = (
   return mousePosition
 }
 
-export default useRefMousePosition
+export default useMousePosition
