@@ -7,8 +7,7 @@ import Nav from './Nav'
 // React
 import { useState } from 'react'
 // NextJs router
-import { withRouter } from 'next/router'
-import { WithRouterProps } from 'next/dist/client/with-router'
+import withRouter, { WithRouterProps } from 'next/dist/client/with-router'
 // Hooks
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
 // Animation
@@ -16,7 +15,7 @@ import { motion, useCycle, useMotionValueEvent, useScroll } from 'framer-motion'
 // Styles
 import styles from '../../styles/navigation/Navbar.module.css'
 // Types
-// import { Theme } from '../../types/theme'
+import { Theme } from '../../types/theme'
 
 /** Theme configuration for Navbar */
 const themeConfig = {
@@ -86,10 +85,12 @@ const sidebarContentVariants = {
 
 /**
  * The main navbar of application
+ * @see {@link WithRouterProps} for props definition
+ * @param {WithRouterProps} WithRouterProps The Footer component porps
  * @returns Navbar component
  */
 const Navbar = ({ router }: WithRouterProps) => {
-  const theme = router.pathname === '/' ? 'light' : 'dark'
+  const theme: Theme = router.pathname === '/' ? 'light' : 'dark'
   // Animation
   const { width } = useDimensions()
   const [isOpen, toggle] = useCycle(false, true)

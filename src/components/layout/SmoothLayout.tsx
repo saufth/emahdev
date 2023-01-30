@@ -1,3 +1,5 @@
+// React
+import { useRef } from 'react'
 // Hooks
 import usePhysics from '../../modules/animation/hooks/usePhysics'
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
@@ -7,7 +9,6 @@ import { useScroll, useTransform, useSpring, motion } from 'framer-motion'
 import styles from '../../styles/layout/AboutLayout.module.css'
 // Types
 import { ParentProps } from '../../types/layout'
-import { useRef } from 'react'
 
 /**
  * A scrolleable container with ease effect

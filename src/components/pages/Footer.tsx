@@ -1,19 +1,22 @@
 // Components
+import CallToAction from '../input/CallToAction'
+import Link from 'next/link'
 import Nav from '../navigation/Nav'
+// Next router
+import withRouter, { WithRouterProps } from 'next/dist/client/with-router'
 // Styles
 import styles from '../../styles/pages/Footer.module.css'
 // Types
-import { ThemeProps } from '../../types/theme'
-import CallToAction from '../input/CallToAction'
-import Link from 'next/link'
+import { Theme } from '../../types/theme'
 
 /**
  * The footer section of application
- * @see {@link Theme} for props definition
- * @param {Theme} Theme The Footer component porps
+ * @see {@link WithRouterProps} for props definition
+ * @param {WithRouterProps} WithRouterProps The Footer component porps
  * @returns Footer section component
  */
-const Footer = ({ theme = 'light' }: ThemeProps) => {
+const Footer = ({ router }: WithRouterProps) => {
+  const theme: Theme = router.pathname === '/' ? 'light' : 'dark'
   const footerStyle = `${styles.section} ${theme !== 'light' ? styles.footerDark : ''}`
   return (
     <footer className={footerStyle}>
@@ -42,4 +45,4 @@ const Footer = ({ theme = 'light' }: ThemeProps) => {
   )
 }
 
-export default Footer
+export default withRouter(Footer)

@@ -20,8 +20,8 @@ const AboutPage = () => {
           </span>
         </Hero>
         <About />
+        <Footer />
       </main>
-      <Footer theme='dark' />
     </AboutLayout>
   )
 }
