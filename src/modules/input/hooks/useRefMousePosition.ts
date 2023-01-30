@@ -22,9 +22,11 @@ const useRefMousePosition = (
     const node = ref.current
     if (node) {
       const handleMousePosition = (event: MouseEvent) => {
-        setMousePosition({
-          x: event[`${from}X`],
-          y: event[`${from}Y`]
+        window.requestAnimationFrame(() => {
+          setMousePosition({
+            x: event[`${from}X`],
+            y: event[`${from}Y`]
+          })
         })
       }
       node.addEventListener('mousemove', handleMousePosition)
