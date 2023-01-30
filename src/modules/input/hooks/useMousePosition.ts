@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect, RefObject } from 'react'
+import { useState, useEffect } from 'react'
 // Types
 import { MousePositionLayout } from '../../../types/input'
 
@@ -10,7 +10,7 @@ import { MousePositionLayout } from '../../../types/input'
  * @returns A object with the coordinates of the cursos
  */
 const useMousePosition = (
-  ref: RefObject<HTMLDivElement>,
+  node: HTMLDivElement | null,
   from: MousePositionLayout = 'screen'
 ) => {
   const [mousePosition, setMousePosition] = useState({
@@ -19,7 +19,6 @@ const useMousePosition = (
   })
 
   useEffect(() => {
-    const node = ref.current
     if (node) {
       const handleMousePosition = (event: MouseEvent) => {
         window.requestAnimationFrame(() => {
@@ -35,7 +34,7 @@ const useMousePosition = (
         node.removeEventListener('mousemove', handleMousePosition)
       }
     }
-  }, [ref, from])
+  }, [node, from])
 
   return mousePosition
 }

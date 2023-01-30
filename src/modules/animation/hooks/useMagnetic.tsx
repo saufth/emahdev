@@ -31,7 +31,7 @@ const useMagnetic = (
 
   const magneticField = fieldRef || magnetRef
 
-  const mousePosition = useMousePosition(magneticField, layout)
+  const mousePosition = useMousePosition(magneticField.current, layout)
   const dimensions = useDimensions(magneticField.current)
 
   useEffect(() => {
