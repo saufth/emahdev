@@ -8,7 +8,7 @@ import { MagneticProps, Transformable } from '../../../types/animation'
 
 /**
  * Used to increase the magnetic force.
- * ej. 1.18 = 18%
+ * @example 1.18 = 18%
  */
 const strength = 1.18
 
@@ -18,7 +18,7 @@ const strength = 1.18
  * @param {MagneticProps} MagneticProps Magnetic props
  * @returns A magnetic ref for a div
  */
-const useMagnetic = (
+const useRefMagnetic = (
   {
     fieldRef,
     rotation = 0,
@@ -94,4 +94,4 @@ const useMagnetic = (
   return magnetRef
 }
 
-export default useMagnetic
+export default useRefMagnetic
