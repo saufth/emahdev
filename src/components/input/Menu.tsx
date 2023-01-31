@@ -1,10 +1,10 @@
 // Styles
-import styles from '../../styles/navigation/Menu.module.css'
+import styles from '../../styles/input/Menu.module.css'
 // Types
-import { MenuProps } from '../../types/navigation'
+import { MenuProps } from '../../types/input'
 
 /**
-* The main menu of the application
+* The main menu button of the application
 * @see {@link MenuProps} for props definition
 * @param {MenuProps} MenuProps The Menu component props
 * @returns The Menu component
