@@ -1,5 +1,5 @@
 // Components
-import CallToAction from '../input/CallToAction'
+import CallToAction from '../navigation/CallToAction'
 // Styles
 import styles from '../../styles/data-display/Showcase.module.css'
 // Types

@@ -1,5 +1,5 @@
 // Components
-import CallToAction from '../input/CallToAction'
+import CallToAction from '../navigation/CallToAction'
 import Link from 'next/link'
 import Nav from '../navigation/Nav'
 // Next router

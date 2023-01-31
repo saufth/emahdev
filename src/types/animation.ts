@@ -1,3 +1,4 @@
+// Types
 import { RefObject } from 'react'
 import { MousePositionLayout } from './input'
 

@@ -1,6 +1,12 @@
 // Types
 import { ThemeProps } from './theme'
 
+/** The CallToAction component props */
+export interface CallToActionProps extends ThemeProps {
+  /** Set button width to 100% and height large */
+  large?: boolean
+}
+
 /** Link component props */
 export interface LinkProps {
   /** Link text */

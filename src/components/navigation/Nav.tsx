@@ -1,5 +1,5 @@
 // Components
-import CallToAction from '../input/CallToAction'
+import CallToAction from './CallToAction'
 import Link from 'next/link'
 // Styles
 import styles from '../../styles/navigation/Nav.module.css'

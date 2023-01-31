@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import styles from '../../styles/input/CallToAction.module.css'
 // Types
-import { CallToActionProps } from '../../types/input'
+import { CallToActionProps } from '../../types/navigation'
 
 /** Theme configuration for CallToAction */
 const themeConfig = {
