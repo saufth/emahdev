@@ -2,7 +2,7 @@
 import CallToAction from './CallToAction'
 import Image from 'next/image'
 import Link from 'next/link'
-import Menu from './Menu'
+import Menu from '../input/Menu'
 import Nav from './Nav'
 // React
 import { useState } from 'react'
