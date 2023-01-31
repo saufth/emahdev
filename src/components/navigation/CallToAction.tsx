@@ -1,6 +1,6 @@
 // Styles
 import Link from 'next/link'
-import styles from '../../styles/input/CallToAction.module.css'
+import styles from '../../styles/navigation/CallToAction.module.css'
 // Types
 import { CallToActionProps } from '../../types/navigation'
 
