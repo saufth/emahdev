@@ -10,7 +10,7 @@ export const physicsConfig: Physics = {
 
 /** Used to create a smooth scroll for mobile */
 export const physicsMobileConfig: Physics = {
-  damping: 12,
-  mass: 0.16,
+  damping: 18,
+  mass: 0.12,
   stiffness: 64
 }
